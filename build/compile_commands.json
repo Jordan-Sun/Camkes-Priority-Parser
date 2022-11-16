@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/NodeTest.dir/node_test.cpp.o -c \"/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node_test.cpp\"",
+  "file": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node_test.cpp"
+},
+{
+  "directory": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/NodeTest.dir/node.cpp.o -c \"/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp\"",
+  "file": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp"
+},
+{
+  "directory": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/GraphTest.dir/graph_test.cpp.o -c \"/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/graph_test.cpp\"",
+  "file": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/graph_test.cpp"
+},
+{
+  "directory": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/GraphTest.dir/graph.cpp.o -c \"/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/graph.cpp\"",
+  "file": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/graph.cpp"
+},
+{
+  "directory": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/GraphTest.dir/node.cpp.o -c \"/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp\"",
+  "file": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp"
+},
+{
+  "directory": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/DAGParser.dir/main.cpp.o -c \"/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/main.cpp\"",
+  "file": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/main.cpp"
+},
+{
+  "directory": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/DAGParser.dir/node.cpp.o -c \"/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp\"",
+  "file": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp"
+}
+]
