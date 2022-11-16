@@ -29,7 +29,8 @@ bool Node::has_requestor(Node *requestor) const
 size_t Node::get_num_requestors() const
 {
     size_t num_requestors = 0;
-    for (const Node *requestor : requestors) {
+    for (const Node *requestor : requestors)
+    {
         // add the number of requestors of the requestor, plus 1 if the requestor is a true requestor
         num_requestors += requestor->get_num_requestors() + (requestor->priority ? 1 : 0);
     }
@@ -41,9 +42,11 @@ pair<const Node *, size_t> Node::get_max_priority() const
 {
     size_t max_priority = priority;
     const Node* max_priority_node = this;
-    for (auto requestor : requestors) {
+    for (auto requestor : requestors)
+    {
         auto requestor_priority = requestor->get_max_priority();
-        if (requestor_priority.second > max_priority) {
+        if (requestor_priority.second > max_priority)
+        {
             max_priority = requestor_priority.second;
             max_priority_node = requestor_priority.first;
         }

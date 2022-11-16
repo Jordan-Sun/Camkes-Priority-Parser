@@ -20,8 +20,10 @@ size_t Graph::size() const
 // add a node to the graph, return true if successful
 bool Graph::add_node(Node node)
 {
-    for (auto &n : nodes) {
-        if (n == node) {
+    for (auto &n : nodes)
+    {
+        if (n == node)
+        {
             return false;
         }
     }
@@ -31,7 +33,8 @@ bool Graph::add_node(Node node)
 
 void print_path(const Node *node)
 {
-    if (node->last) {
+    if (node->last)
+    {
         print_path(node->last);
         cout << " -> ";
     }
@@ -44,7 +47,8 @@ bool Graph::add_edge(string src_name, string dest_name)
     // find the source and destination nodes
     Node *src = nullptr;
     Node *dest = nullptr;
-    for (auto &n : nodes) {
+    for (auto &n : nodes)
+    {
         if (n.name == src_name) {
             src = &n;
         }
@@ -55,7 +59,8 @@ bool Graph::add_edge(string src_name, string dest_name)
     }
     
     // if either node is not found, return false
-    if (!src || !dest) {
+    if (!src || !dest)
+    {
         cout << "Error: node not found" << endl;
         return false;
     }
@@ -96,7 +101,8 @@ bool Graph::add_edge(string src_name, string dest_name)
     }
 
     // add the source to the destination's requestors
-    if (dest->add_requestor(src)) {
+    if (dest->add_requestor(src))
+    {
         return true;
     }
     cout << "Error: edge already exists" << endl;
@@ -106,8 +112,12 @@ bool Graph::add_edge(string src_name, string dest_name)
 // operators
 ostream& operator<<(ostream& os, const Graph& graph)
 {
-    for (auto &node : graph.nodes) {
-        os << node;
+    for (auto &node : graph.nodes)
+    {
+        if (node.get_num_requestors())
+        {
+            os << node;
+        }
     }
     return os;
 }
