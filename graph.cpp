@@ -63,7 +63,7 @@ bool Graph::add_edge(string src_name, string dest_name)
     // if src is the same as dest, return false
     if (src_name == dest_name)
     {
-        cout << dest_name << " -> " << src_name << endl;
+        cout << "Error: self-loop " << dest_name << " -> " << src_name << endl;
         return false;
     }
 
@@ -81,6 +81,7 @@ bool Graph::add_edge(string src_name, string dest_name)
         // if the current node is the source, return false
         if (curr == dest)
         {
+            cout << "Error: cycle ";
             print_path(curr);
             cout << " -> " << src->name << endl;
             return false;
