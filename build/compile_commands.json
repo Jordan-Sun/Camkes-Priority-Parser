@@ -33,5 +33,10 @@
   "directory": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build",
   "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/DAGParser.dir/node.cpp.o -c \"/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp\"",
   "file": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp"
+},
+{
+  "directory": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/DAGParser.dir/graph.cpp.o -c \"/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/graph.cpp\"",
+  "file": "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/graph.cpp"
 }
 ]

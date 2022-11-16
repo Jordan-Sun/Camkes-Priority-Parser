@@ -22,12 +22,3 @@ enum return_codes
     INVALID_ARGS,
     FAILED_TO_OPEN_FILE
 };
-
-// enumeration for dag parser states
-enum dag_parser_states
-{
-    START,
-    NODE,
-    EDGE,
-    END
-};

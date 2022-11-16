@@ -13,7 +13,7 @@ class Node {
 public:
     const std::string name;
     // only a true requestor if the priority is not 0
-    const size_t priority;
+    size_t priority;
     std::set<Node *> requestors;
     // temp variable used in the graph class
     Node *last;

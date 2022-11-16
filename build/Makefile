@@ -555,6 +555,7 @@ graph.o: graph.cpp.o
 # target to build an object file
 graph.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/graph.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/graph.cpp.o
 .PHONY : graph.cpp.o
 
 graph.i: graph.cpp.i
@@ -563,6 +564,7 @@ graph.i: graph.cpp.i
 # target to preprocess a source file
 graph.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/graph.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/graph.cpp.i
 .PHONY : graph.cpp.i
 
 graph.s: graph.cpp.s
@@ -571,6 +573,7 @@ graph.s: graph.cpp.s
 # target to generate assembly for a file
 graph.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/graph.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/graph.cpp.s
 .PHONY : graph.cpp.s
 
 graph_test.o: graph_test.cpp.o

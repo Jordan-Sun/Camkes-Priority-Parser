@@ -45,18 +45,8 @@ void print_path(const Node *node)
 bool Graph::add_edge(string src_name, string dest_name)
 {
     // find the source and destination nodes
-    Node *src = nullptr;
-    Node *dest = nullptr;
-    for (auto &n : nodes)
-    {
-        if (n.name == src_name) {
-            src = &n;
-        }
-        if (n.name == dest_name)
-        {
-            dest = &n;
-        }
-    }
+    Node *src = get_node(src_name);
+    Node *dest = get_node(dest_name);
     
     // if either node is not found, return false
     if (!src || !dest)
@@ -109,15 +99,25 @@ bool Graph::add_edge(string src_name, string dest_name)
     return false;
 }
 
+// returns a node in the graph
+Node* Graph::get_node(string name)
+{
+    for (auto &n : nodes)
+    {
+        if (n.name == name)
+        {
+            return &n;
+        }
+    }
+    return nullptr;
+}
+
 // operators
 ostream& operator<<(ostream& os, const Graph& graph)
 {
     for (auto &node : graph.nodes)
     {
-        if (node.get_num_requestors())
-        {
-            os << node;
-        }
+        os << node;
     }
     return os;
 }
