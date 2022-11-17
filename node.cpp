@@ -8,7 +8,7 @@
 
 using namespace std;
 
-Node::Node(string name, size_t priority)
+Node::Node(string name, int priority)
 : name(name), priority(priority)
 {
 }
@@ -26,21 +26,21 @@ bool Node::has_requestor(Node *requestor) const
 }
 
 // returns the number of requestors of the node
-size_t Node::get_num_requestors() const
+int Node::get_num_requestors() const
 {
-    size_t num_requestors = 0;
+    int num_requestors = 0;
     for (const Node *requestor : requestors)
     {
         // add the number of requestors of the requestor, plus 1 if the requestor is a true requestor
-        num_requestors += requestor->get_num_requestors() + (requestor->priority ? 1 : 0);
+        num_requestors += requestor->get_num_requestors() + ((requestor->priority < 0) ? 1 : 0);
     }
     return num_requestors;
 }
 
 // returns the maximum priority of the node and its requestors
-pair<const Node *, size_t> Node::get_max_priority() const
+pair<const Node *, int> Node::get_max_priority() const
 {
-    size_t max_priority = priority;
+    int max_priority = priority;
     const Node* max_priority_node = this;
     for (auto requestor : requestors)
     {
