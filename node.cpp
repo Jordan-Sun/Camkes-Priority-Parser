@@ -36,10 +36,8 @@ set<const Node *> Node::get_requestors() const
             requestors.insert(requestor);
         }
         // add the requestors of the requestor
-        for (const Node *requestor_requestor : requestor->get_requestors())
-        {
-            requestors.insert(requestor_requestor);
-        }
+        set<const Node *> requestors_of_requestor = requestor->get_requestors();
+        requestors.insert(requestors_of_requestor.begin(), requestors_of_requestor.end());
     }
     return requestors;
 }
