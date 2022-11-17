@@ -13,6 +13,7 @@ class Graph {
 private:
     // nodes in the graph
     std::vector<Node> nodes;
+    static std::vector<std::string> displayed_shapes;
 
 public:
     Graph() = default;

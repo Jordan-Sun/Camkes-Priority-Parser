@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "GraphTest"
+			"path" : "DAGParser"
 		}
 	],
 	"backtrace" : 1,
@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 8,
+				"line" : 11,
 				"parent" : 0
 			}
 		]
@@ -36,9 +36,20 @@
 			[
 				{
 					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk"
+				},
+				{
+					"fragment" : "-std=gnu++11"
 				}
 			],
 			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "11"
+			},
 			"sourceIndexes" : 
 			[
 				0,
@@ -47,7 +58,7 @@
 			]
 		}
 	],
-	"id" : "GraphTest::@6890427a1f51a3e7e1df",
+	"id" : "DAGParser::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -63,8 +74,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "GraphTest",
-	"nameOnDisk" : "GraphTest",
+	"name" : "DAGParser",
+	"nameOnDisk" : "DAGParser",
 	"paths" : 
 	{
 		"build" : ".",
@@ -87,19 +98,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "graph_test.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "graph.cpp",
+			"path" : "main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "node.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "graph.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -8,8 +8,8 @@
 
 using namespace std;
 
-Node::Node(string name, int priority)
-: name(name), priority(priority)
+Node::Node(string name, string shape, int priority)
+: name(name), shape(shape), priority(priority), last(nullptr)
 {
 }
 
@@ -31,7 +31,7 @@ set<const Node *> Node::get_requestors() const
     for (const Node *requestor : immed_requestors)
     {
         // add the requestor if it is a true requestor
-        if (requestor->priority >= 0)
+        if (requestor->priority != NONE)
         {
             requestors.insert(requestor);
         }

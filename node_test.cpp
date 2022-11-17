@@ -5,13 +5,13 @@ using namespace std;
 
 int main()
 {
-    Node a("a", 10);
-    Node b("b", 20);
-    Node c("c", 30);
-    Node d("d", 40);
-    Node e("e");
-    Node f("f");
-    Node g("g");
+    Node a("a", "box", 10);
+    Node b("b", "box", 20);
+    Node c("c", "box", 30);
+    Node d("d", "box", 40);
+    Node e("e", "circle");
+    Node f("f", "circle");
+    Node g("g", "circle");
 
     assert(e.add_requestor(&a));
     assert(!e.add_requestor(&a));

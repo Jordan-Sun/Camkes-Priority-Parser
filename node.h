@@ -9,6 +9,8 @@
 #include <set>
 #include <ostream>
 
+#define NONE -1
+
 class Node {
 private:
     // returns the requestors of the node
@@ -16,13 +18,14 @@ private:
 
 public:
     const std::string name;
-    // only a true requestor if the priority is not 0
+    const std::string shape;
+    // only a true requestor if the priority is not NONE
     int priority;
     std::set<Node *> immed_requestors;
     // temp variable used in the graph class
     Node *last;
 
-    Node(std::string name, int priority = -1);
+    Node(std::string name, std::string shape, int priority = NONE);
     ~Node() = default;
 
     // add a requestor to the node, return true if successful

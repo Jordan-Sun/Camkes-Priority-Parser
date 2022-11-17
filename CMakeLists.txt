@@ -4,6 +4,8 @@ project(DAGParser VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
+set(CMAKE_CXX_STANDARD 11)
+
 add_executable(NodeTest node_test.cpp node.cpp)
 add_executable(GraphTest graph_test.cpp graph.cpp node.cpp)
 add_executable(DAGParser main.cpp node.cpp graph.cpp)

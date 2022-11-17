@@ -16,12 +16,17 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
+    // regex for parsing the input file
     regex node_regex("\".*\" \\[.*\\]");
     regex edge_regex("\".*\" -> \".*\"");
-    regex node_name_regex("\".*\"");
+    regex node_shape_regex("shape=[a-z]+");
     regex priority_regex(".*\\._priority = [0-9]+");
+
+    // helper variables
     string line;
     smatch match;
+    vector<string> acceptable_shapes = {"box", "circle"};
+    vector<string> ignored_nodes;
     Graph graph;
 
     // check for correct number of arguments
@@ -45,17 +50,41 @@ int main(int argc, char* argv[])
         // check for node
         if (regex_search(line, match, node_regex))
         {
-            // find the node name
             string node = match.str();
+            // find the node name
             istringstream iss(node);
-            // erase quotes from the matched node name
             string node_name;
             iss >> node_name;
+            // erase quotes from the matched node name
             node_name.erase(std::remove(node_name.begin(), node_name.end(), '\"'), node_name.end());
-            // add the node to the graph
-            cout << "Found node: " << node_name << endl;
-            Node n(node_name);
-            graph.add_node(n);
+            // find the node shape
+            if (regex_search(node, match, node_shape_regex))
+            {
+                string shape_label = match.str();
+                replace(shape_label.begin(), shape_label.end(), '=', ' ');
+                istringstream iss(shape_label);
+                string discard, shape;
+                iss >> discard >> shape;
+                // add the node to the graph if it is acceptable
+                if (find(acceptable_shapes.begin(), acceptable_shapes.end(), shape) != acceptable_shapes.end())
+                {
+                    Node n(node_name, shape);
+                    if (graph.add_node(n))
+                    {
+                        cout << "Added " << shape << " node: " << node_name << endl;
+                    }
+                    else
+                    {
+                        cout << "Error: node " << node_name << " already exists" << endl;
+                    }
+                }
+                // add the node to the list of ignored nodes
+                else
+                {
+                    cout << "Ignored " << shape << " node: " << node_name << endl;
+                    ignored_nodes.push_back(node_name);
+                }
+            }
         }
         // check for edge
         if (regex_search(line, match, edge_regex))
@@ -68,9 +97,17 @@ int main(int argc, char* argv[])
             iss >> src_name >> discard >> dest_name;
             src_name.erase(std::remove(src_name.begin(), src_name.end(), '\"'), src_name.end());
             dest_name.erase(std::remove(dest_name.begin(), dest_name.end(), '\"'), dest_name.end());
-            // add the edge to the graph
-            cout << "Found edge: " << src_name << " -> " << dest_name << endl;
-            graph.add_edge(src_name, dest_name);
+            // skip the edge if either node is ignored
+            if (find(ignored_nodes.begin(), ignored_nodes.end(), src_name) != ignored_nodes.end() ||
+                find(ignored_nodes.begin(), ignored_nodes.end(), dest_name) != ignored_nodes.end())
+            {
+                cout << "Ignored edge: " << src_name << " -> " << dest_name << endl;
+            }
+            // otherwise try to add the edge to the graph
+            else if (graph.add_edge(src_name, dest_name))
+            {
+                cout << "Added edge: " << src_name << " -> " << dest_name << endl;
+            }
         }
     }
     // close dag file

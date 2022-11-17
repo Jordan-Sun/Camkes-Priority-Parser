@@ -11,6 +11,9 @@
 
 using namespace std;
 
+// static vector of displayed shapes
+vector<string> Graph::displayed_shapes = {"box"};
+
 // returns the size of the graph
 size_t Graph::size() const
 {
@@ -49,16 +52,21 @@ bool Graph::add_edge(string src_name, string dest_name)
     Node *dest = get_node(dest_name);
     
     // if either node is not found, return false
-    if (!src || !dest)
+    if (!src)
     {
-        cout << "Error: node not found" << endl;
+        cout << "Error: node " << src_name << " not found" << endl;
+        return false;
+    }
+    if (!dest)
+    {
+        cout << "Error: node " << dest_name << " not found" << endl;
         return false;
     }
 
     // if src is the same as dest, return false
     if (src_name == dest_name)
     {
-        cout << "Error: self-loop " << dest_name << " -> " << src_name << endl;
+        cout << "Error: self-loop " << dest_name << " -> " << src_name << " detected" << endl;
         return false;
     }
 
@@ -78,7 +86,7 @@ bool Graph::add_edge(string src_name, string dest_name)
         {
             cout << "Error: cycle ";
             print_path(curr);
-            cout << " -> " << src->name << endl;
+            cout << " -> " << src->name << " detected" << endl;
             return false;
         }
 
@@ -95,7 +103,7 @@ bool Graph::add_edge(string src_name, string dest_name)
     {
         return true;
     }
-    cout << "Error: edge already exists" << endl;
+    cout << "Error: edge " << src_name << " -> " << dest_name << " already exists" << endl;
     return false;
 }
 
@@ -117,7 +125,11 @@ ostream& operator<<(ostream& os, const Graph& graph)
 {
     for (auto &node : graph.nodes)
     {
-        os << node;
+        // only print nodes of the displayed shapes
+        if (find(Graph::displayed_shapes.begin(), Graph::displayed_shapes.end(), node.shape) != Graph::displayed_shapes.end())
+        {
+            os << node;
+        }
     }
     return os;
 }
