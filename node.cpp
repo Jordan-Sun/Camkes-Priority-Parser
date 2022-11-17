@@ -16,25 +16,38 @@ Node::Node(string name, int priority)
 // add a requestor to the node, return true if successful
 bool Node::add_requestor(Node *requestor)
 {
-    return requestors.insert(requestor).second;
+    return immed_requestors.insert(requestor).second;
 }
 
 // check if the node has the given requestor
 bool Node::has_requestor(Node *requestor) const
 {
-    return requestors.find(requestor) != requestors.end();
+    return immed_requestors.find(requestor) != immed_requestors.end();
+}
+
+set<const Node *> Node::get_requestors() const
+{
+    set<const Node *> requestors;
+    for (const Node *requestor : immed_requestors)
+    {
+        // add the requestor if it is a true requestor
+        if (requestor->priority >= 0)
+        {
+            requestors.insert(requestor);
+        }
+        // add the requestors of the requestor
+        for (const Node *requestor_requestor : requestor->get_requestors())
+        {
+            requestors.insert(requestor_requestor);
+        }
+    }
+    return requestors;
 }
 
 // returns the number of requestors of the node
 int Node::get_num_requestors() const
 {
-    int num_requestors = 0;
-    for (const Node *requestor : requestors)
-    {
-        // add the number of requestors of the requestor, plus 1 if the requestor is a true requestor
-        num_requestors += requestor->get_num_requestors() + ((requestor->priority < 0) ? 1 : 0);
-    }
-    return num_requestors;
+    return get_requestors().size();
 }
 
 // returns the maximum priority of the node and its requestors
@@ -42,13 +55,12 @@ pair<const Node *, int> Node::get_max_priority() const
 {
     int max_priority = priority;
     const Node* max_priority_node = this;
-    for (auto requestor : requestors)
+    for (auto requestor : get_requestors())
     {
-        auto requestor_priority = requestor->get_max_priority();
-        if (requestor_priority.second > max_priority)
+        if (requestor->priority > max_priority)
         {
-            max_priority = requestor_priority.second;
-            max_priority_node = requestor_priority.first;
+            max_priority = requestor->priority;
+            max_priority_node = requestor;
         }
     }
     return make_pair(max_priority_node, max_priority);

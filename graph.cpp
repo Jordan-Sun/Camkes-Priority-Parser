@@ -83,7 +83,7 @@ bool Graph::add_edge(string src_name, string dest_name)
         }
 
         // add the requestors of the current node to the stack
-        for (auto requestor : curr->requestors)
+        for (auto requestor : curr->immed_requestors)
         {
             requestor->last = curr;
             stack.push_front(requestor);

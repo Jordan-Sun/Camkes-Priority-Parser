@@ -10,11 +10,15 @@
 #include <ostream>
 
 class Node {
+private:
+    // returns the requestors of the node
+    std::set<const Node *> get_requestors() const;
+
 public:
     const std::string name;
     // only a true requestor if the priority is not 0
     int priority;
-    std::set<Node *> requestors;
+    std::set<Node *> immed_requestors;
     // temp variable used in the graph class
     Node *last;
 
