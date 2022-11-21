@@ -1,0 +1,31 @@
+Added box node: timer
+Added box node: t1
+Added box node: t2
+Added box node: t3
+Added box node: pip
+Added box node: propagation
+Added box node: ipcp
+Added circle node: conn_pip
+Added edge: t1 -> conn_pip
+Added edge: t2 -> conn_pip
+Added edge: conn_pip -> pip
+Added circle node: conn_propagation
+Added edge: t2 -> conn_propagation
+Added edge: t3 -> conn_propagation
+Added edge: conn_propagation -> propagation
+Added circle node: conn_ipcp
+Added edge: pip -> conn_ipcp
+Added edge: propagation -> conn_ipcp
+Added edge: conn_ipcp -> ipcp
+Added circle node: periodic
+Added edge: t1 -> periodic
+Added edge: t2 -> periodic
+Added edge: t3 -> periodic
+Added edge: periodic -> timer
+Ignored diamond node: timer.epit2_conn.timer.gpt_conn
+Ignored edge: timer -> timer.epit2_conn.timer.gpt_conn
+Ignored edge: timer.epit2_conn.timer.gpt_conn -> timer
+Ignored edge: timer.epit2_conn.timer.gpt_conn -> timer
+Found priority: t1 = 10
+Found priority: t2 = 20
+Found priority: t3 = 30

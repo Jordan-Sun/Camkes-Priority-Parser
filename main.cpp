@@ -29,10 +29,13 @@ int main(int argc, char* argv[])
     vector<string> ignored_nodes;
     Graph graph;
 
+    // log file
+    ofstream log_file("log.txt");
+
     // check for correct number of arguments
     if (argc != NUM_ARGS)
     {
-        cout << "Usage: " << argv[PROGRAM_NAME] << " <dag file> <priority file>" << endl;
+        cerr << "Usage: " << argv[PROGRAM_NAME] << " <dag file> <priority file>" << endl;
         return INVALID_ARGS;
     }
 
@@ -40,7 +43,7 @@ int main(int argc, char* argv[])
     ifstream dag_file(argv[DAG_FILE]);
     if (!dag_file.is_open())
     {
-        cout << "Error: could not open dag file " << argv[DAG_FILE] << endl;
+        cerr << "Error: could not open dag file " << argv[DAG_FILE] << endl;
         return FAILED_TO_OPEN_FILE;
     }
 
@@ -71,17 +74,17 @@ int main(int argc, char* argv[])
                     auto n = make_shared<Node>(node_name, shape);
                     if (graph.add_node(n))
                     {
-                        cout << "Added " << shape << " node: " << node_name << endl;
+                        log_file << "Added " << shape << " node: " << node_name << endl;
                     }
                     else
                     {
-                        cout << "Error: node " << node_name << " already exists" << endl;
+                        cerr << "Error: node " << node_name << " already exists" << endl;
                     }
                 }
                 // add the node to the list of ignored nodes
                 else
                 {
-                    cout << "Ignored " << shape << " node: " << node_name << endl;
+                    log_file << "Ignored " << shape << " node: " << node_name << endl;
                     ignored_nodes.push_back(node_name);
                 }
             }
@@ -101,12 +104,12 @@ int main(int argc, char* argv[])
             if (find(ignored_nodes.begin(), ignored_nodes.end(), src_name) != ignored_nodes.end() ||
                 find(ignored_nodes.begin(), ignored_nodes.end(), dest_name) != ignored_nodes.end())
             {
-                cout << "Ignored edge: " << src_name << " -> " << dest_name << endl;
+                log_file << "Ignored edge: " << src_name << " -> " << dest_name << endl;
             }
             // otherwise try to add the edge to the graph
             else if (graph.add_edge(src_name, dest_name))
             {
-                cout << "Added edge: " << src_name << " -> " << dest_name << endl;
+                log_file << "Added edge: " << src_name << " -> " << dest_name << endl;
             }
         }
     }
@@ -117,7 +120,7 @@ int main(int argc, char* argv[])
     ifstream priority_file(argv[PRIORITY_FILE]);
     if (!priority_file.is_open())
     {
-        cout << "Error: could not open priority file " << argv[PRIORITY_FILE] << endl;
+        cerr << "Error: could not open priority file " << argv[PRIORITY_FILE] << endl;
         return FAILED_TO_OPEN_FILE;
     }
 
@@ -134,7 +137,7 @@ int main(int argc, char* argv[])
             string node_name, discard, equals, priority_value;
             iss >> node_name >> discard >> equals >> priority_value;
             // set the node priority
-            cout << "Found priority: " << node_name << " = " << priority_value << endl;
+            log_file << "Found priority: " << node_name << " = " << priority_value << endl;
             graph.get_node(node_name)->priority = stoi(priority_value);
         }
     }
@@ -143,7 +146,7 @@ int main(int argc, char* argv[])
     priority_file.close();
 
     // print the graph
-    cout << "Graph:" << endl << graph << endl;
+    cout << graph << endl;
 
     return SUCCESS;
 }
