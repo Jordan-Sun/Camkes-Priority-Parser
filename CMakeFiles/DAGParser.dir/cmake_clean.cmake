@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/DAGParser.dir/graph.cpp.o"
-  "CMakeFiles/DAGParser.dir/graph.cpp.o.d"
-  "CMakeFiles/DAGParser.dir/main.cpp.o"
-  "CMakeFiles/DAGParser.dir/main.cpp.o.d"
-  "CMakeFiles/DAGParser.dir/node.cpp.o"
-  "CMakeFiles/DAGParser.dir/node.cpp.o.d"
+  "CMakeFiles/DAGParser.dir/src/graph.cpp.o"
+  "CMakeFiles/DAGParser.dir/src/graph.cpp.o.d"
+  "CMakeFiles/DAGParser.dir/src/main.cpp.o"
+  "CMakeFiles/DAGParser.dir/src/main.cpp.o.d"
+  "CMakeFiles/DAGParser.dir/src/node.cpp.o"
+  "CMakeFiles/DAGParser.dir/src/node.cpp.o.d"
   "DAGParser"
   "DAGParser.pdb"
 )

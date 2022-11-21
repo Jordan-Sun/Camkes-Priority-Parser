@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/NodeTest.dir/node.cpp.o"
-  "CMakeFiles/NodeTest.dir/node.cpp.o.d"
-  "CMakeFiles/NodeTest.dir/node_test.cpp.o"
-  "CMakeFiles/NodeTest.dir/node_test.cpp.o.d"
+  "CMakeFiles/NodeTest.dir/src/node.cpp.o"
+  "CMakeFiles/NodeTest.dir/src/node.cpp.o.d"
+  "CMakeFiles/NodeTest.dir/src/node_test.cpp.o"
+  "CMakeFiles/NodeTest.dir/src/node_test.cpp.o.d"
   "NodeTest"
   "NodeTest.pdb"
 )

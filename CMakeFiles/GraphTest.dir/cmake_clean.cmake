@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GraphTest.dir/graph.cpp.o"
-  "CMakeFiles/GraphTest.dir/graph.cpp.o.d"
-  "CMakeFiles/GraphTest.dir/graph_test.cpp.o"
-  "CMakeFiles/GraphTest.dir/graph_test.cpp.o.d"
-  "CMakeFiles/GraphTest.dir/node.cpp.o"
-  "CMakeFiles/GraphTest.dir/node.cpp.o.d"
+  "CMakeFiles/GraphTest.dir/src/graph.cpp.o"
+  "CMakeFiles/GraphTest.dir/src/graph.cpp.o.d"
+  "CMakeFiles/GraphTest.dir/src/graph_test.cpp.o"
+  "CMakeFiles/GraphTest.dir/src/graph_test.cpp.o.d"
+  "CMakeFiles/GraphTest.dir/src/node.cpp.o"
+  "CMakeFiles/GraphTest.dir/src/node.cpp.o.d"
   "GraphTest"
   "GraphTest.pdb"
 )

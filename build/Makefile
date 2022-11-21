@@ -549,134 +549,134 @@ DAGParser/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/build
 .PHONY : DAGParser/fast
 
-graph.o: graph.cpp.o
-.PHONY : graph.o
+src/graph.o: src/graph.cpp.o
+.PHONY : src/graph.o
 
 # target to build an object file
-graph.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/graph.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/graph.cpp.o
-.PHONY : graph.cpp.o
+src/graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/src/graph.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/src/graph.cpp.o
+.PHONY : src/graph.cpp.o
 
-graph.i: graph.cpp.i
-.PHONY : graph.i
+src/graph.i: src/graph.cpp.i
+.PHONY : src/graph.i
 
 # target to preprocess a source file
-graph.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/graph.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/graph.cpp.i
-.PHONY : graph.cpp.i
+src/graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/src/graph.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/src/graph.cpp.i
+.PHONY : src/graph.cpp.i
 
-graph.s: graph.cpp.s
-.PHONY : graph.s
+src/graph.s: src/graph.cpp.s
+.PHONY : src/graph.s
 
 # target to generate assembly for a file
-graph.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/graph.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/graph.cpp.s
-.PHONY : graph.cpp.s
+src/graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/src/graph.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/src/graph.cpp.s
+.PHONY : src/graph.cpp.s
 
-graph_test.o: graph_test.cpp.o
-.PHONY : graph_test.o
+src/graph_test.o: src/graph_test.cpp.o
+.PHONY : src/graph_test.o
 
 # target to build an object file
-graph_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/graph_test.cpp.o
-.PHONY : graph_test.cpp.o
+src/graph_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/src/graph_test.cpp.o
+.PHONY : src/graph_test.cpp.o
 
-graph_test.i: graph_test.cpp.i
-.PHONY : graph_test.i
+src/graph_test.i: src/graph_test.cpp.i
+.PHONY : src/graph_test.i
 
 # target to preprocess a source file
-graph_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/graph_test.cpp.i
-.PHONY : graph_test.cpp.i
+src/graph_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/src/graph_test.cpp.i
+.PHONY : src/graph_test.cpp.i
 
-graph_test.s: graph_test.cpp.s
-.PHONY : graph_test.s
+src/graph_test.s: src/graph_test.cpp.s
+.PHONY : src/graph_test.s
 
 # target to generate assembly for a file
-graph_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/graph_test.cpp.s
-.PHONY : graph_test.cpp.s
+src/graph_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/src/graph_test.cpp.s
+.PHONY : src/graph_test.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-node.o: node.cpp.o
-.PHONY : node.o
+src/node.o: src/node.cpp.o
+.PHONY : src/node.o
 
 # target to build an object file
-node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeTest.dir/build.make CMakeFiles/NodeTest.dir/node.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/node.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/node.cpp.o
-.PHONY : node.cpp.o
+src/node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeTest.dir/build.make CMakeFiles/NodeTest.dir/src/node.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/src/node.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/src/node.cpp.o
+.PHONY : src/node.cpp.o
 
-node.i: node.cpp.i
-.PHONY : node.i
+src/node.i: src/node.cpp.i
+.PHONY : src/node.i
 
 # target to preprocess a source file
-node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeTest.dir/build.make CMakeFiles/NodeTest.dir/node.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/node.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/node.cpp.i
-.PHONY : node.cpp.i
+src/node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeTest.dir/build.make CMakeFiles/NodeTest.dir/src/node.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/src/node.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/src/node.cpp.i
+.PHONY : src/node.cpp.i
 
-node.s: node.cpp.s
-.PHONY : node.s
+src/node.s: src/node.cpp.s
+.PHONY : src/node.s
 
 # target to generate assembly for a file
-node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeTest.dir/build.make CMakeFiles/NodeTest.dir/node.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/node.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/node.cpp.s
-.PHONY : node.cpp.s
+src/node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeTest.dir/build.make CMakeFiles/NodeTest.dir/src/node.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphTest.dir/build.make CMakeFiles/GraphTest.dir/src/node.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DAGParser.dir/build.make CMakeFiles/DAGParser.dir/src/node.cpp.s
+.PHONY : src/node.cpp.s
 
-node_test.o: node_test.cpp.o
-.PHONY : node_test.o
+src/node_test.o: src/node_test.cpp.o
+.PHONY : src/node_test.o
 
 # target to build an object file
-node_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeTest.dir/build.make CMakeFiles/NodeTest.dir/node_test.cpp.o
-.PHONY : node_test.cpp.o
+src/node_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeTest.dir/build.make CMakeFiles/NodeTest.dir/src/node_test.cpp.o
+.PHONY : src/node_test.cpp.o
 
-node_test.i: node_test.cpp.i
-.PHONY : node_test.i
+src/node_test.i: src/node_test.cpp.i
+.PHONY : src/node_test.i
 
 # target to preprocess a source file
-node_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeTest.dir/build.make CMakeFiles/NodeTest.dir/node_test.cpp.i
-.PHONY : node_test.cpp.i
+src/node_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeTest.dir/build.make CMakeFiles/NodeTest.dir/src/node_test.cpp.i
+.PHONY : src/node_test.cpp.i
 
-node_test.s: node_test.cpp.s
-.PHONY : node_test.s
+src/node_test.s: src/node_test.cpp.s
+.PHONY : src/node_test.s
 
 # target to generate assembly for a file
-node_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeTest.dir/build.make CMakeFiles/NodeTest.dir/node_test.cpp.s
-.PHONY : node_test.cpp.s
+src/node_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeTest.dir/build.make CMakeFiles/NodeTest.dir/src/node_test.cpp.s
+.PHONY : src/node_test.cpp.s
 
 # Help Target
 help:
@@ -720,21 +720,21 @@ help:
 	@echo "... DAGParser"
 	@echo "... GraphTest"
 	@echo "... NodeTest"
-	@echo "... graph.o"
-	@echo "... graph.i"
-	@echo "... graph.s"
-	@echo "... graph_test.o"
-	@echo "... graph_test.i"
-	@echo "... graph_test.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... node.o"
-	@echo "... node.i"
-	@echo "... node.s"
-	@echo "... node_test.o"
-	@echo "... node_test.i"
-	@echo "... node_test.s"
+	@echo "... src/graph.o"
+	@echo "... src/graph.i"
+	@echo "... src/graph.s"
+	@echo "... src/graph_test.o"
+	@echo "... src/graph_test.i"
+	@echo "... src/graph_test.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/node.o"
+	@echo "... src/node.i"
+	@echo "... src/node.s"
+	@echo "... src/node_test.o"
+	@echo "... src/node_test.i"
+	@echo "... src/node_test.s"
 .PHONY : help
 
 

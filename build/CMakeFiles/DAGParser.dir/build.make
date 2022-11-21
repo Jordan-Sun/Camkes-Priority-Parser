@@ -69,60 +69,60 @@ include CMakeFiles/DAGParser.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/DAGParser.dir/flags.make
 
-CMakeFiles/DAGParser.dir/main.cpp.o: CMakeFiles/DAGParser.dir/flags.make
-CMakeFiles/DAGParser.dir/main.cpp.o: /Users/jor/Documents/School/WashU/FL2022/Student/M&G\ Research/M\ Assist/main.cpp
-CMakeFiles/DAGParser.dir/main.cpp.o: CMakeFiles/DAGParser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DAGParser.dir/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DAGParser.dir/main.cpp.o -MF CMakeFiles/DAGParser.dir/main.cpp.o.d -o CMakeFiles/DAGParser.dir/main.cpp.o -c "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/main.cpp"
+CMakeFiles/DAGParser.dir/src/main.cpp.o: CMakeFiles/DAGParser.dir/flags.make
+CMakeFiles/DAGParser.dir/src/main.cpp.o: /Users/jor/Documents/School/WashU/FL2022/Student/M&G\ Research/M\ Assist/src/main.cpp
+CMakeFiles/DAGParser.dir/src/main.cpp.o: CMakeFiles/DAGParser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DAGParser.dir/src/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DAGParser.dir/src/main.cpp.o -MF CMakeFiles/DAGParser.dir/src/main.cpp.o.d -o CMakeFiles/DAGParser.dir/src/main.cpp.o -c "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/main.cpp"
 
-CMakeFiles/DAGParser.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAGParser.dir/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/main.cpp" > CMakeFiles/DAGParser.dir/main.cpp.i
+CMakeFiles/DAGParser.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAGParser.dir/src/main.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/main.cpp" > CMakeFiles/DAGParser.dir/src/main.cpp.i
 
-CMakeFiles/DAGParser.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAGParser.dir/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/main.cpp" -o CMakeFiles/DAGParser.dir/main.cpp.s
+CMakeFiles/DAGParser.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAGParser.dir/src/main.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/main.cpp" -o CMakeFiles/DAGParser.dir/src/main.cpp.s
 
-CMakeFiles/DAGParser.dir/node.cpp.o: CMakeFiles/DAGParser.dir/flags.make
-CMakeFiles/DAGParser.dir/node.cpp.o: /Users/jor/Documents/School/WashU/FL2022/Student/M&G\ Research/M\ Assist/node.cpp
-CMakeFiles/DAGParser.dir/node.cpp.o: CMakeFiles/DAGParser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DAGParser.dir/node.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DAGParser.dir/node.cpp.o -MF CMakeFiles/DAGParser.dir/node.cpp.o.d -o CMakeFiles/DAGParser.dir/node.cpp.o -c "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp"
+CMakeFiles/DAGParser.dir/src/node.cpp.o: CMakeFiles/DAGParser.dir/flags.make
+CMakeFiles/DAGParser.dir/src/node.cpp.o: /Users/jor/Documents/School/WashU/FL2022/Student/M&G\ Research/M\ Assist/src/node.cpp
+CMakeFiles/DAGParser.dir/src/node.cpp.o: CMakeFiles/DAGParser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DAGParser.dir/src/node.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DAGParser.dir/src/node.cpp.o -MF CMakeFiles/DAGParser.dir/src/node.cpp.o.d -o CMakeFiles/DAGParser.dir/src/node.cpp.o -c "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/node.cpp"
 
-CMakeFiles/DAGParser.dir/node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAGParser.dir/node.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp" > CMakeFiles/DAGParser.dir/node.cpp.i
+CMakeFiles/DAGParser.dir/src/node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAGParser.dir/src/node.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/node.cpp" > CMakeFiles/DAGParser.dir/src/node.cpp.i
 
-CMakeFiles/DAGParser.dir/node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAGParser.dir/node.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp" -o CMakeFiles/DAGParser.dir/node.cpp.s
+CMakeFiles/DAGParser.dir/src/node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAGParser.dir/src/node.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/node.cpp" -o CMakeFiles/DAGParser.dir/src/node.cpp.s
 
-CMakeFiles/DAGParser.dir/graph.cpp.o: CMakeFiles/DAGParser.dir/flags.make
-CMakeFiles/DAGParser.dir/graph.cpp.o: /Users/jor/Documents/School/WashU/FL2022/Student/M&G\ Research/M\ Assist/graph.cpp
-CMakeFiles/DAGParser.dir/graph.cpp.o: CMakeFiles/DAGParser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DAGParser.dir/graph.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DAGParser.dir/graph.cpp.o -MF CMakeFiles/DAGParser.dir/graph.cpp.o.d -o CMakeFiles/DAGParser.dir/graph.cpp.o -c "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/graph.cpp"
+CMakeFiles/DAGParser.dir/src/graph.cpp.o: CMakeFiles/DAGParser.dir/flags.make
+CMakeFiles/DAGParser.dir/src/graph.cpp.o: /Users/jor/Documents/School/WashU/FL2022/Student/M&G\ Research/M\ Assist/src/graph.cpp
+CMakeFiles/DAGParser.dir/src/graph.cpp.o: CMakeFiles/DAGParser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DAGParser.dir/src/graph.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DAGParser.dir/src/graph.cpp.o -MF CMakeFiles/DAGParser.dir/src/graph.cpp.o.d -o CMakeFiles/DAGParser.dir/src/graph.cpp.o -c "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/graph.cpp"
 
-CMakeFiles/DAGParser.dir/graph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAGParser.dir/graph.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/graph.cpp" > CMakeFiles/DAGParser.dir/graph.cpp.i
+CMakeFiles/DAGParser.dir/src/graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAGParser.dir/src/graph.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/graph.cpp" > CMakeFiles/DAGParser.dir/src/graph.cpp.i
 
-CMakeFiles/DAGParser.dir/graph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAGParser.dir/graph.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/graph.cpp" -o CMakeFiles/DAGParser.dir/graph.cpp.s
+CMakeFiles/DAGParser.dir/src/graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAGParser.dir/src/graph.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/graph.cpp" -o CMakeFiles/DAGParser.dir/src/graph.cpp.s
 
 # Object files for target DAGParser
 DAGParser_OBJECTS = \
-"CMakeFiles/DAGParser.dir/main.cpp.o" \
-"CMakeFiles/DAGParser.dir/node.cpp.o" \
-"CMakeFiles/DAGParser.dir/graph.cpp.o"
+"CMakeFiles/DAGParser.dir/src/main.cpp.o" \
+"CMakeFiles/DAGParser.dir/src/node.cpp.o" \
+"CMakeFiles/DAGParser.dir/src/graph.cpp.o"
 
 # External object files for target DAGParser
 DAGParser_EXTERNAL_OBJECTS =
 
-DAGParser: CMakeFiles/DAGParser.dir/main.cpp.o
-DAGParser: CMakeFiles/DAGParser.dir/node.cpp.o
-DAGParser: CMakeFiles/DAGParser.dir/graph.cpp.o
+DAGParser: CMakeFiles/DAGParser.dir/src/main.cpp.o
+DAGParser: CMakeFiles/DAGParser.dir/src/node.cpp.o
+DAGParser: CMakeFiles/DAGParser.dir/src/graph.cpp.o
 DAGParser: CMakeFiles/DAGParser.dir/build.make
 DAGParser: CMakeFiles/DAGParser.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable DAGParser"

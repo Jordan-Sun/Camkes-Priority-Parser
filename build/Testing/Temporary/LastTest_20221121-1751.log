@@ -1,336 +1,65 @@
-Start testing: Nov 21 12:37 CST
+Start testing: Nov 21 14:03 CST
 ----------------------------------------------------------
 2/4 Testing: GraphTest
 2/4 Test: GraphTest
 Command: "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/GraphTest"
 Directory: /Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build
-"GraphTest" start time: Nov 21 12:37 CST
+"GraphTest" start time: Nov 21 14:03 CST
 Output:
 ----------------------------------------------------------
--- BEGIN DEBUG --
-src: a
-dest: e
-a requestors:	
-b requestors:	
-c requestors:	
-d requestors:	
-e requestors:	
-f requestors:	
-g requestors:	
--- END DEBUG --
--- BEGIN DEBUG --
-src: b
-dest: e
-a requestors:	
-b requestors:	
-c requestors:	
-d requestors:	
-e requestors:	a	
-f requestors:	
-g requestors:	
--- END DEBUG --
--- BEGIN DEBUG --
-src: c
-dest: f
-a requestors:	
-b requestors:	
-c requestors:	
-d requestors:	
-e requestors:	a	b	
-f requestors:	
-g requestors:	
--- END DEBUG --
--- BEGIN DEBUG --
-src: d
-dest: f
-a requestors:	
-b requestors:	
-c requestors:	
-d requestors:	
-e requestors:	a	b	
-f requestors:	c	
-g requestors:	
--- END DEBUG --
--- BEGIN DEBUG --
-src: e
-dest: g
-a requestors:	
-b requestors:	
-c requestors:	
-d requestors:	
-e requestors:	a	b	
-f requestors:	c	d	
-g requestors:	
--- END DEBUG --
--- BEGIN DEBUG --
-src: f
-dest: g
-a requestors:	
-b requestors:	
-c requestors:	
-d requestors:	
-e requestors:	a	b	
-f requestors:	c	d	
-g requestors:	e	
--- END DEBUG --
 Error: node not a node not found
 Error: node not a node not found
 Error: self-loop a -> a detected
--- BEGIN DEBUG --
-src: a
-dest: e
-a requestors:	
-b requestors:	
-c requestors:	
-d requestors:	
-e requestors:	a	b	
-f requestors:	c	d	
-g requestors:	e	f	
--- END DEBUG --
 Error: edge a -> e already exists
--- BEGIN DEBUG --
-src: g
-dest: a
-a requestors:	
-b requestors:	
-c requestors:	
-d requestors:	
-e requestors:	a	b	
-f requestors:	c	d	
-g requestors:	e	f	
--- END DEBUG --
 Error: cycle g -> e -> a -> g detected
-0x137e066f80x137e067880x137e068180x137e068a8
+a has 0 requestors, with a max priority of 10 from a
+b has 0 requestors, with a max priority of 20 from b
+c has 0 requestors, with a max priority of 30 from c
+d has 0 requestors, with a max priority of 40 from d
 <end of output>
-Test time =   0.20 sec
+Test time =   0.21 sec
 ----------------------------------------------------------
 Test Passed.
-"GraphTest" end time: Nov 21 12:37 CST
+"GraphTest" end time: Nov 21 14:03 CST
 "GraphTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+1/4 Testing: NodeTest
+1/4 Test: NodeTest
+Command: "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/NodeTest"
+Directory: /Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build
+"NodeTest" start time: Nov 21 14:03 CST
+Output:
+----------------------------------------------------------
+0x13d6066d80x13d6067680x13d6067f80x13d6068880x13d6069180x13d6069a80x13d606a38
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest" end time: Nov 21 14:03 CST
+"NodeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 4/4 Testing: ParseDiamondGraph
 4/4 Test: ParseDiamondGraph
 Command: "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/DAGParser" "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/TestFiles/diamond-graph.dot" "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/TestFiles/diamond-task-system.camkes"
 Directory: /Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build
-"ParseDiamondGraph" start time: Nov 21 12:37 CST
+"ParseDiamondGraph" start time: Nov 21 14:03 CST
 Output:
 ----------------------------------------------------------
-Added box node: timer
-Added box node: t1
-Added box node: t2
-Added box node: t3
-Added box node: pip
-Added box node: propagation
-Added box node: ipcp
-Added circle node: conn_pip
--- BEGIN DEBUG --
-src: t1
-dest: conn_pip
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	
-propagation requestors:	
-ipcp requestors:	
-conn_pip requestors:	
--- END DEBUG --
-Added edge: t1 -> conn_pip
--- BEGIN DEBUG --
-src: t2
-dest: conn_pip
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	
-propagation requestors:	
-ipcp requestors:	
-conn_pip requestors:	t1	
--- END DEBUG --
-Added edge: t2 -> conn_pip
--- BEGIN DEBUG --
-src: conn_pip
-dest: pip
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	
-propagation requestors:	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
--- END DEBUG --
-Added edge: conn_pip -> pip
-Added circle node: conn_propagation
--- BEGIN DEBUG --
-src: t2
-dest: conn_propagation
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	
--- END DEBUG --
-Added edge: t2 -> conn_propagation
--- BEGIN DEBUG --
-src: t3
-dest: conn_propagation
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t2	
--- END DEBUG --
-Added edge: t3 -> conn_propagation
--- BEGIN DEBUG --
-src: conn_propagation
-dest: propagation
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t2	t3	
--- END DEBUG --
-Added edge: conn_propagation -> propagation
-Added circle node: conn_ipcp
--- BEGIN DEBUG --
-src: pip
-dest: conn_ipcp
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t2	t3	
-conn_ipcp requestors:	
--- END DEBUG --
-Added edge: pip -> conn_ipcp
--- BEGIN DEBUG --
-src: propagation
-dest: conn_ipcp
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t2	t3	
-conn_ipcp requestors:	pip	
--- END DEBUG --
-Added edge: propagation -> conn_ipcp
--- BEGIN DEBUG --
-src: conn_ipcp
-dest: ipcp
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t2	t3	
-conn_ipcp requestors:	pip	propagation	
--- END DEBUG --
-Added edge: conn_ipcp -> ipcp
-Added circle node: periodic
--- BEGIN DEBUG --
-src: t1
-dest: periodic
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	conn_ipcp	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t2	t3	
-conn_ipcp requestors:	pip	propagation	
-periodic requestors:	
--- END DEBUG --
-Added edge: t1 -> periodic
--- BEGIN DEBUG --
-src: t2
-dest: periodic
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	conn_ipcp	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t2	t3	
-conn_ipcp requestors:	pip	propagation	
-periodic requestors:	t1	
--- END DEBUG --
-Added edge: t2 -> periodic
--- BEGIN DEBUG --
-src: t3
-dest: periodic
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	conn_ipcp	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t2	t3	
-conn_ipcp requestors:	pip	propagation	
-periodic requestors:	t1	t2	
--- END DEBUG --
-Added edge: t3 -> periodic
--- BEGIN DEBUG --
-src: periodic
-dest: timer
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	conn_ipcp	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t2	t3	
-conn_ipcp requestors:	pip	propagation	
-periodic requestors:	t1	t2	t3	
--- END DEBUG --
-Added edge: periodic -> timer
-Ignored diamond node: timer.epit2_conn.timer.gpt_conn
-Ignored edge: timer -> timer.epit2_conn.timer.gpt_conn
-Ignored edge: timer.epit2_conn.timer.gpt_conn -> timer
-Ignored edge: timer.epit2_conn.timer.gpt_conn -> timer
-Found priority: t1 = 10
-Found priority: t2 = 30
-Found priority: t3 = 20
-Graph:
-0x14e7041d80x14e7042680x14e7042f80x14e7043c80x14e7044580x14e7045b80x14e704648
+timer has 3 requestors, with a max priority of 30 from t3
+t1 has 0 requestors, with a max priority of 10 from t1
+t2 has 0 requestors, with a max priority of 20 from t2
+t3 has 0 requestors, with a max priority of 30 from t3
+pip has 2 requestors, with a max priority of 20 from t2
+propagation has 2 requestors, with a max priority of 30 from t3
+ipcp has 3 requestors, with a max priority of 30 from t3
+
 <end of output>
-Test time =   0.23 sec
+Test time =   0.36 sec
 ----------------------------------------------------------
 Test Passed.
-"ParseDiamondGraph" end time: Nov 21 12:37 CST
+"ParseDiamondGraph" end time: Nov 21 14:03 CST
 "ParseDiamondGraph" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -338,273 +67,24 @@ Test Passed.
 3/4 Test: ParseGraph
 Command: "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/DAGParser" "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/TestFiles/graph.dot" "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/TestFiles/task-system.camkes"
 Directory: /Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build
-"ParseGraph" start time: Nov 21 12:37 CST
+"ParseGraph" start time: Nov 21 14:03 CST
 Output:
 ----------------------------------------------------------
-Added box node: timer
-Added box node: t1
-Added box node: t2
-Added box node: t3
-Added box node: t4
-Added box node: pip
-Added box node: propagation
-Added box node: ipcp
-Added circle node: conn_pip
--- BEGIN DEBUG --
-src: t1
-dest: conn_pip
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	
-propagation requestors:	
-ipcp requestors:	
-conn_pip requestors:	
--- END DEBUG --
-Added edge: t1 -> conn_pip
--- BEGIN DEBUG --
-src: t2
-dest: conn_pip
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	
-propagation requestors:	
-ipcp requestors:	
-conn_pip requestors:	t1	
--- END DEBUG --
-Added edge: t2 -> conn_pip
--- BEGIN DEBUG --
-src: conn_pip
-dest: pip
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	
-propagation requestors:	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
--- END DEBUG --
-Added edge: conn_pip -> pip
-Added circle node: conn_propagation
--- BEGIN DEBUG --
-src: t3
-dest: conn_propagation
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	
--- END DEBUG --
-Added edge: t3 -> conn_propagation
--- BEGIN DEBUG --
-src: t4
-dest: conn_propagation
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t3	
--- END DEBUG --
-Added edge: t4 -> conn_propagation
--- BEGIN DEBUG --
-src: conn_propagation
-dest: propagation
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t3	t4	
--- END DEBUG --
-Added edge: conn_propagation -> propagation
-Added circle node: conn_ipcp
--- BEGIN DEBUG --
-src: pip
-dest: conn_ipcp
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t3	t4	
-conn_ipcp requestors:	
--- END DEBUG --
-Added edge: pip -> conn_ipcp
--- BEGIN DEBUG --
-src: propagation
-dest: conn_ipcp
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t3	t4	
-conn_ipcp requestors:	pip	
--- END DEBUG --
-Added edge: propagation -> conn_ipcp
--- BEGIN DEBUG --
-src: conn_ipcp
-dest: ipcp
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t3	t4	
-conn_ipcp requestors:	pip	propagation	
--- END DEBUG --
-Added edge: conn_ipcp -> ipcp
-Added circle node: periodic
--- BEGIN DEBUG --
-src: t1
-dest: periodic
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	conn_ipcp	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t3	t4	
-conn_ipcp requestors:	pip	propagation	
-periodic requestors:	
--- END DEBUG --
-Added edge: t1 -> periodic
--- BEGIN DEBUG --
-src: t2
-dest: periodic
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	conn_ipcp	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t3	t4	
-conn_ipcp requestors:	pip	propagation	
-periodic requestors:	t1	
--- END DEBUG --
-Added edge: t2 -> periodic
--- BEGIN DEBUG --
-src: t3
-dest: periodic
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	conn_ipcp	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t3	t4	
-conn_ipcp requestors:	pip	propagation	
-periodic requestors:	t1	t2	
--- END DEBUG --
-Added edge: t3 -> periodic
--- BEGIN DEBUG --
-src: t4
-dest: periodic
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	conn_ipcp	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t3	t4	
-conn_ipcp requestors:	pip	propagation	
-periodic requestors:	t1	t2	t3	
--- END DEBUG --
-Added edge: t4 -> periodic
--- BEGIN DEBUG --
-src: periodic
-dest: timer
-timer requestors:	
-t1 requestors:	
-t2 requestors:	
-t3 requestors:	
-t4 requestors:	
-pip requestors:	conn_pip	
-propagation requestors:	conn_propagation	
-ipcp requestors:	conn_ipcp	
-conn_pip requestors:	t1	t2	
-conn_propagation requestors:	t3	t4	
-conn_ipcp requestors:	pip	propagation	
-periodic requestors:	t1	t2	t3	t4	
--- END DEBUG --
-Added edge: periodic -> timer
-Ignored diamond node: timer.epit2_conn.timer.gpt_conn
-Ignored edge: timer -> timer.epit2_conn.timer.gpt_conn
-Ignored edge: timer.epit2_conn.timer.gpt_conn -> timer
-Ignored edge: timer.epit2_conn.timer.gpt_conn -> timer
-Found priority: t1 = 10
-Found priority: t2 = 30
-Found priority: t3 = 20
-Found priority: t4 = 40
-Graph:
-0x120e072180x120e072a80x120e073380x120e074080x120e074980x120e075a80x120e076880x120e07718
+timer has 4 requestors, with a max priority of 40 from t4
+t1 has 0 requestors, with a max priority of 10 from t1
+t2 has 0 requestors, with a max priority of 30 from t2
+t3 has 0 requestors, with a max priority of 20 from t3
+t4 has 0 requestors, with a max priority of 40 from t4
+pip has 2 requestors, with a max priority of 30 from t2
+propagation has 2 requestors, with a max priority of 40 from t4
+ipcp has 4 requestors, with a max priority of 40 from t4
+
 <end of output>
-Test time =   0.23 sec
+Test time =   0.36 sec
 ----------------------------------------------------------
 Test Passed.
-"ParseGraph" end time: Nov 21 12:37 CST
+"ParseGraph" end time: Nov 21 14:03 CST
 "ParseGraph" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-1/4 Testing: NodeTest
-1/4 Test: NodeTest
-Command: "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/NodeTest"
-Directory: /Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build
-"NodeTest" start time: Nov 21 12:37 CST
-Output:
-----------------------------------------------------------
-0x1356066d80x1356067680x1356067f80x1356068880x1356069180x1356069a80x135606a38
-<end of output>
-Test time =   0.26 sec
-----------------------------------------------------------
-Test Passed.
-"NodeTest" end time: Nov 21 12:37 CST
-"NodeTest" time elapsed: 00:00:00
-----------------------------------------------------------
-
-End testing: Nov 21 12:37 CST
+End testing: Nov 21 14:03 CST

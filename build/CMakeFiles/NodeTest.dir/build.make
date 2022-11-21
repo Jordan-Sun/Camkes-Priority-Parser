@@ -69,44 +69,44 @@ include CMakeFiles/NodeTest.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/NodeTest.dir/flags.make
 
-CMakeFiles/NodeTest.dir/node_test.cpp.o: CMakeFiles/NodeTest.dir/flags.make
-CMakeFiles/NodeTest.dir/node_test.cpp.o: /Users/jor/Documents/School/WashU/FL2022/Student/M&G\ Research/M\ Assist/node_test.cpp
-CMakeFiles/NodeTest.dir/node_test.cpp.o: CMakeFiles/NodeTest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NodeTest.dir/node_test.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NodeTest.dir/node_test.cpp.o -MF CMakeFiles/NodeTest.dir/node_test.cpp.o.d -o CMakeFiles/NodeTest.dir/node_test.cpp.o -c "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node_test.cpp"
+CMakeFiles/NodeTest.dir/src/node_test.cpp.o: CMakeFiles/NodeTest.dir/flags.make
+CMakeFiles/NodeTest.dir/src/node_test.cpp.o: /Users/jor/Documents/School/WashU/FL2022/Student/M&G\ Research/M\ Assist/src/node_test.cpp
+CMakeFiles/NodeTest.dir/src/node_test.cpp.o: CMakeFiles/NodeTest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NodeTest.dir/src/node_test.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NodeTest.dir/src/node_test.cpp.o -MF CMakeFiles/NodeTest.dir/src/node_test.cpp.o.d -o CMakeFiles/NodeTest.dir/src/node_test.cpp.o -c "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/node_test.cpp"
 
-CMakeFiles/NodeTest.dir/node_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NodeTest.dir/node_test.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node_test.cpp" > CMakeFiles/NodeTest.dir/node_test.cpp.i
+CMakeFiles/NodeTest.dir/src/node_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NodeTest.dir/src/node_test.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/node_test.cpp" > CMakeFiles/NodeTest.dir/src/node_test.cpp.i
 
-CMakeFiles/NodeTest.dir/node_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NodeTest.dir/node_test.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node_test.cpp" -o CMakeFiles/NodeTest.dir/node_test.cpp.s
+CMakeFiles/NodeTest.dir/src/node_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NodeTest.dir/src/node_test.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/node_test.cpp" -o CMakeFiles/NodeTest.dir/src/node_test.cpp.s
 
-CMakeFiles/NodeTest.dir/node.cpp.o: CMakeFiles/NodeTest.dir/flags.make
-CMakeFiles/NodeTest.dir/node.cpp.o: /Users/jor/Documents/School/WashU/FL2022/Student/M&G\ Research/M\ Assist/node.cpp
-CMakeFiles/NodeTest.dir/node.cpp.o: CMakeFiles/NodeTest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NodeTest.dir/node.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NodeTest.dir/node.cpp.o -MF CMakeFiles/NodeTest.dir/node.cpp.o.d -o CMakeFiles/NodeTest.dir/node.cpp.o -c "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp"
+CMakeFiles/NodeTest.dir/src/node.cpp.o: CMakeFiles/NodeTest.dir/flags.make
+CMakeFiles/NodeTest.dir/src/node.cpp.o: /Users/jor/Documents/School/WashU/FL2022/Student/M&G\ Research/M\ Assist/src/node.cpp
+CMakeFiles/NodeTest.dir/src/node.cpp.o: CMakeFiles/NodeTest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NodeTest.dir/src/node.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NodeTest.dir/src/node.cpp.o -MF CMakeFiles/NodeTest.dir/src/node.cpp.o.d -o CMakeFiles/NodeTest.dir/src/node.cpp.o -c "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/node.cpp"
 
-CMakeFiles/NodeTest.dir/node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NodeTest.dir/node.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp" > CMakeFiles/NodeTest.dir/node.cpp.i
+CMakeFiles/NodeTest.dir/src/node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NodeTest.dir/src/node.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/node.cpp" > CMakeFiles/NodeTest.dir/src/node.cpp.i
 
-CMakeFiles/NodeTest.dir/node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NodeTest.dir/node.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/node.cpp" -o CMakeFiles/NodeTest.dir/node.cpp.s
+CMakeFiles/NodeTest.dir/src/node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NodeTest.dir/src/node.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/src/node.cpp" -o CMakeFiles/NodeTest.dir/src/node.cpp.s
 
 # Object files for target NodeTest
 NodeTest_OBJECTS = \
-"CMakeFiles/NodeTest.dir/node_test.cpp.o" \
-"CMakeFiles/NodeTest.dir/node.cpp.o"
+"CMakeFiles/NodeTest.dir/src/node_test.cpp.o" \
+"CMakeFiles/NodeTest.dir/src/node.cpp.o"
 
 # External object files for target NodeTest
 NodeTest_EXTERNAL_OBJECTS =
 
-NodeTest: CMakeFiles/NodeTest.dir/node_test.cpp.o
-NodeTest: CMakeFiles/NodeTest.dir/node.cpp.o
+NodeTest: CMakeFiles/NodeTest.dir/src/node_test.cpp.o
+NodeTest: CMakeFiles/NodeTest.dir/src/node.cpp.o
 NodeTest: CMakeFiles/NodeTest.dir/build.make
 NodeTest: CMakeFiles/NodeTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable NodeTest"

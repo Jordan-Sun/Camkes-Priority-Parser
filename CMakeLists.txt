@@ -6,9 +6,9 @@ enable_testing()
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(NodeTest node_test.cpp node.cpp)
-add_executable(GraphTest graph_test.cpp graph.cpp node.cpp)
-add_executable(DAGParser main.cpp node.cpp graph.cpp)
+add_executable(NodeTest src/node_test.cpp src/node.cpp)
+add_executable(GraphTest src/graph_test.cpp src/graph.cpp src/node.cpp)
+add_executable(DAGParser src/main.cpp src/node.cpp src/graph.cpp)
 
 add_test(NAME NodeTest COMMAND NodeTest)
 add_test(NAME GraphTest COMMAND GraphTest)

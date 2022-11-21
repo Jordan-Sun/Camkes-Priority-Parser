@@ -24,13 +24,13 @@
 	ProcessorClockFrequency="0"
 	>
 	<Testing>
-		<StartDateTime>Nov 21 12:37 CST</StartDateTime>
-		<StartTestTime>1669055869</StartTestTime>
+		<StartDateTime>Nov 21 14:03 CST</StartDateTime>
+		<StartTestTime>1669060994</StartTestTime>
 		<TestList>
 			<Test>./GraphTest</Test>
+			<Test>./NodeTest</Test>
 			<Test>./ParseDiamondGraph</Test>
 			<Test>./ParseGraph</Test>
-			<Test>./NodeTest</Test>
 		</TestList>
 		<Test Status="passed">
 			<Name>GraphTest</Name>
@@ -39,7 +39,7 @@
 			<FullCommandLine>/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G\ Research/M\ Assist/build/GraphTest</FullCommandLine>
 			<Results>
 				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.203038</Value>
+					<Value>0.207157</Value>
 				</NamedMeasurement>
 				<NamedMeasurement type="numeric/double" name="Processors">
 					<Value>1</Value>
@@ -54,59 +54,7 @@
 					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
 				</NamedMeasurement>
 				<Measurement>
-					<Value encoding="base64" compression="gzip">eJzFzsGKwjAQxvGzeYrvBVJW2VOPxSJeetKT7CHNTGxhbTRJd/XtjSiUoAeRunsJ+cNM8pMSRblYVpiXxXoBKYV3OocSxD7kYKHg+NDHsM7nE1GnqdOkNDlNk+Y2TSlRVvPBIR/L6jfI1Eg2fbOZUW31SDr6G51+1cc33/bdPnpVaP5NyPfG0jnrcnSWOB4Barga23f03ECWZWKzalqPvXIB1iA0jBD/he3Dvg/4VT5SdvaHCb7tNKMN4KNmJn8dbhz7xn7TZXv6MftEfYoPZF/iDC24X2U=</Value>
-				</Measurement>
-			</Results>
-		</Test>
-		<Test Status="passed">
-			<Name>ParseDiamondGraph</Name>
-			<Path>.</Path>
-			<FullName>./ParseDiamondGraph</FullName>
-			<FullCommandLine>/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G\ Research/M\ Assist/build/DAGParser "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/diamond-graph.dot" "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/diamond-task-system.camkes"</FullCommandLine>
-			<Results>
-				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.23045</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="numeric/double" name="Processors">
-					<Value>1</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Completion Status">
-					<Value>Completed</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Command Line">
-					<Value>/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G\ Research/M\ Assist/build/DAGParser "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/diamond-graph.dot" "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/diamond-task-system.camkes"</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Environment">
-					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
-				</NamedMeasurement>
-				<Measurement>
-					<Value encoding="base64" compression="gzip">eJzVk01OwzAQhdf4FHMBR8Rl1QVSq0YVm67KCiGU2kNjqbVdewLl9jgJbf4QrVjBct7MG71vZM+UQgUbewRjFU6B9B49mw3VdCyJsTQZSU67seaty7c5aWtGPe3kySC1lzv80qU15qVaxjnMs+XDChbZ/HEJnLPgZR1QYaDOYA0CHg9l1K0P0xtG6aAWg3rSr+OagdAm7zeq2H3llKOvxvTZatFmb0hRbesbA7+/DCr+AyilF1jFNaznfkP8h2FJ/Mx79kXq9kt888I7X+O6B9Ax/Oo2SZKwp3WhA7jcE9hXoAKB4gTYklxJ8J6HaNrbt5g4aCMRNAEeJaIKzXDhMRR2pyp3eivuYPMRFyTP7BNqg3Qt====</Value>
-				</Measurement>
-			</Results>
-		</Test>
-		<Test Status="passed">
-			<Name>ParseGraph</Name>
-			<Path>.</Path>
-			<FullName>./ParseGraph</FullName>
-			<FullCommandLine>/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G\ Research/M\ Assist/build/DAGParser "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/graph.dot" "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/task-system.camkes"</FullCommandLine>
-			<Results>
-				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.231984</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="numeric/double" name="Processors">
-					<Value>1</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Completion Status">
-					<Value>Completed</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Command Line">
-					<Value>/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G\ Research/M\ Assist/build/DAGParser "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/graph.dot" "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/task-system.camkes"</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Environment">
-					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
-				</NamedMeasurement>
-				<Measurement>
-					<Value encoding="base64" compression="gzip">eJzVk8FOwzAMQM/0K/wDqWja0w5Im1ZNXHaCE0KoS8waaWtC4sL4e9KWrWsCjOuOfo5dvzSeS4kSNvoAjZY4A1J7tMk8pFmMeIzyGBURMsrEzGpTbStSuolyyohjgVBW7PCbC900L10zxmBRru7XsCwXjytgLHFW9DNLdHR2sHcDi2+t59q62U1CWRDzIM6DuJjGvm0ARpNpotOYkuNcU+ptyvVydBnMUW773wDs7rI4v0Zxyi648/+4n/LDDVyRPPG//U91/hbGFfphI85W6bcHko8PJE3T5OmhVg5MZQn0K1CNQD4NuiXTEnxUzs+61+/+c041AkER4EEgSjccri26Wu9kV53d8gI2n75B+px8AZlLcqU=</Value>
+					<Value encoding="base64" compression="gzip">eJyNjEsOgzAMRPc5hQ9QJPpZddEdBwmxA5ECpo4RcPtGhZZtNmNL8940IixPGBkph4I9X8/ziKYpBBJFX0XmKRPVKweSklP6A4Qd7V0+UcjiBrSGpOlHuM1Fgm5Hvhs5unPIQm8T1CD0nikpS7rAErTP4GBXmCSwBN2APVxr8MIDWNOWS7dDao0rl+6H5AyWS49DQvMB6e2Ang==</Value>
 				</Measurement>
 			</Results>
 		</Test>
@@ -117,7 +65,7 @@
 			<FullCommandLine>/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G\ Research/M\ Assist/build/NodeTest</FullCommandLine>
 			<Results>
 				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.262534</Value>
+					<Value>0.314611</Value>
 				</NamedMeasurement>
 				<NamedMeasurement type="numeric/double" name="Processors">
 					<Value>1</Value>
@@ -132,12 +80,64 @@
 					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
 				</NamedMeasurement>
 				<Measurement>
-					<Value encoding="base64" compression="gzip">eJwzqDA0NjUzMDNLsTCAMs3NEMw0ONPCAs60NEQwE+HMRGMLLgDcbBJK====</Value>
+					<Value encoding="base64" compression="gzip">eJwzqDA0TjEzMDNLsTCAMs3NEMw0ONPCAs60NEQwE+HMRGMLLgARLBOT====</Value>
 				</Measurement>
 			</Results>
 		</Test>
-		<EndDateTime>Nov 21 12:37 CST</EndDateTime>
-		<EndTestTime>1669055869</EndTestTime>
+		<Test Status="passed">
+			<Name>ParseDiamondGraph</Name>
+			<Path>.</Path>
+			<FullName>./ParseDiamondGraph</FullName>
+			<FullCommandLine>/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G\ Research/M\ Assist/build/DAGParser "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/diamond-graph.dot" "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/diamond-task-system.camkes"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.358591</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G\ Research/M\ Assist/build/DAGParser "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/diamond-graph.dot" "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/diamond-task-system.camkes"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyd0MENwjAQRNG7q5gCOMR2RSvkkD2YXdaDgO6RIkXK0VDA0x8NtbfAJgMV0R7PNmgxLngpNwi6vOGhFsoPbEVdsIZ1sCbmnS0zLB8sJ5Z5Vg5WEus8O4109d2VH3Me5nITqt3n/amrfvW/Xk1fpluImg==</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>ParseGraph</Name>
+			<Path>.</Path>
+			<FullName>./ParseGraph</FullName>
+			<FullCommandLine>/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G\ Research/M\ Assist/build/DAGParser "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/graph.dot" "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/task-system.camkes"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.361266</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G\ Research/M\ Assist/build/DAGParser "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/graph.dot" "/Users/jor/Documents/School/WashU/FL2022/Student/M&amp;G Research/M Assist/TestFiles/task-system.camkes"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyd0UsKwzAMBNC9TzEH6CL+XMgEp9HClSortL19IWDIUu0BHjPDGPWm2OtAgbbn0YaxjhteZDsqen1DlFjJPuANZcGm3GElWDzZ4mFxshgs+VmeLAXLfpYmy8GKn122Ccnp0o8tRVnqvRrxw+8vuSSr/HVG+ALSvJsk====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Nov 21 14:03 CST</EndDateTime>
+		<EndTestTime>1669060994</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>
