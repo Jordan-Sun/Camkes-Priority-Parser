@@ -70,21 +70,6 @@ bool Graph::add_edge(string src_name, string dest_name)
         return false;
     }
 
-    // debug
-    cout << "-- BEGIN DEBUG --" << endl;
-    cout << "src: " << src->name << endl;
-    cout << "dest: " << dest->name << endl;
-    for (auto &node : nodes)
-    {
-        cout << node->name << " requestors:\t";
-        for (auto &requestor : node->immed_requestors)
-        {
-            cout << requestor->name << "\t";
-        }
-        cout << endl;
-    }
-    cout << "-- END DEBUG --" << endl;
-
     // check if there exist a path from src to dest
     std::shared_ptr<Node> curr = src;
     list<std::shared_ptr<Node>> stack;
@@ -148,7 +133,7 @@ ostream& operator<<(ostream& os, const Graph& graph)
         // only print nodes of the displayed shapes
         if (find(Graph::displayed_shapes.begin(), Graph::displayed_shapes.end(), node->shape) != Graph::displayed_shapes.end())
         {
-            os << node;
+            os << *node;
         }
     }
     return os;
