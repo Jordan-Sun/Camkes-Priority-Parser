@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
                 // add the node to the graph if it is acceptable
                 if (find(acceptable_shapes.begin(), acceptable_shapes.end(), shape) != acceptable_shapes.end())
                 {
-                    Node n(node_name, shape);
+                    auto n = make_shared<Node>(node_name, shape);
                     if (graph.add_node(n))
                     {
                         cout << "Added " << shape << " node: " << node_name << endl;

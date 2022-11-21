@@ -14,21 +14,21 @@ Node::Node(string name, string shape, int priority)
 }
 
 // add a requestor to the node, return true if successful
-bool Node::add_requestor(Node *requestor)
+bool Node::add_requestor(std::shared_ptr<Node> requestor)
 {
     return immed_requestors.insert(requestor).second;
 }
 
 // check if the node has the given requestor
-bool Node::has_requestor(Node *requestor) const
+bool Node::has_requestor(std::shared_ptr<Node> requestor) const
 {
     return immed_requestors.find(requestor) != immed_requestors.end();
 }
 
-set<const Node *> Node::get_requestors() const
+set<shared_ptr<const Node>> Node::get_requestors() const
 {
-    set<const Node *> requestors;
-    for (const Node *requestor : immed_requestors)
+    set<shared_ptr<const Node>> requestors;
+    for (shared_ptr<const Node> requestor : immed_requestors)
     {
         // add the requestor if it is a true requestor
         if (requestor->priority != NONE)
@@ -36,7 +36,7 @@ set<const Node *> Node::get_requestors() const
             requestors.insert(requestor);
         }
         // add the requestors of the requestor
-        set<const Node *> requestors_of_requestor = requestor->get_requestors();
+        set<shared_ptr<const Node>> requestors_of_requestor = requestor->get_requestors();
         requestors.insert(requestors_of_requestor.begin(), requestors_of_requestor.end());
     }
     return requestors;
@@ -49,10 +49,10 @@ int Node::get_num_requestors() const
 }
 
 // returns the maximum priority of the node and its requestors
-pair<const Node *, int> Node::get_max_priority() const
+pair<shared_ptr<const Node>, int> Node::get_max_priority() const
 {
     int max_priority = priority;
-    const Node* max_priority_node = this;
+    shared_ptr<const Node> max_priority_node = shared_from_this();
     for (auto requestor : get_requestors())
     {
         if (requestor->priority > max_priority)

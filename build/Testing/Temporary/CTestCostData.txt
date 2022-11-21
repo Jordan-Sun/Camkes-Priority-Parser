@@ -1,0 +1,5 @@
+NodeTest 6 0.129171
+GraphTest 6 0.219233
+ParseGraph 5 0.305511
+ParseDiamondGraph 1 0.23045
+---

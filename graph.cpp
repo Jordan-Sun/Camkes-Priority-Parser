@@ -21,11 +21,11 @@ size_t Graph::size() const
 }
 
 // add a node to the graph, return true if successful
-bool Graph::add_node(Node node)
+bool Graph::add_node(shared_ptr<Node> node)
 {
     for (auto &n : nodes)
     {
-        if (n == node)
+        if (*n == *node)
         {
             return false;
         }
@@ -34,7 +34,7 @@ bool Graph::add_node(Node node)
     return true;
 }
 
-void print_path(const Node *node)
+void print_path(shared_ptr<const Node> node)
 {
     if (node->last)
     {
@@ -48,9 +48,9 @@ void print_path(const Node *node)
 bool Graph::add_edge(string src_name, string dest_name)
 {
     // find the source and destination nodes
-    Node *src = get_node(src_name);
-    Node *dest = get_node(dest_name);
-    
+    std::shared_ptr<Node> src = get_node(src_name);
+    std::shared_ptr<Node> dest = get_node(dest_name);
+
     // if either node is not found, return false
     if (!src)
     {
@@ -70,10 +70,24 @@ bool Graph::add_edge(string src_name, string dest_name)
         return false;
     }
 
+    // debug
+    cout << "-- BEGIN DEBUG --" << endl;
+    cout << "src: " << src->name << endl;
+    cout << "dest: " << dest->name << endl;
+    for (auto &node : nodes)
+    {
+        cout << node->name << " requestors:\t";
+        for (auto &requestor : node->immed_requestors)
+        {
+            cout << requestor->name << "\t";
+        }
+        cout << endl;
+    }
+    cout << "-- END DEBUG --" << endl;
+
     // check if there exist a path from src to dest
-    src->last = nullptr;
-    Node *curr = src;
-    list<Node *> stack;
+    std::shared_ptr<Node> curr = src;
+    list<std::shared_ptr<Node>> stack;
     stack.push_front(curr);
 
     while (!stack.empty())
@@ -98,6 +112,12 @@ bool Graph::add_edge(string src_name, string dest_name)
         }
     }
 
+    // clear the last pointers
+    for (auto &node : nodes)
+    {
+        node->last = nullptr;
+    }
+
     // add the source to the destination's requestors
     if (dest->add_requestor(src))
     {
@@ -108,13 +128,13 @@ bool Graph::add_edge(string src_name, string dest_name)
 }
 
 // returns a node in the graph
-Node* Graph::get_node(string name)
+shared_ptr<Node> Graph::get_node(string name)
 {
     for (auto &n : nodes)
     {
-        if (n.name == name)
+        if (n->name == name)
         {
-            return &n;
+            return shared_ptr<Node>(n);
         }
     }
     return nullptr;
@@ -126,7 +146,7 @@ ostream& operator<<(ostream& os, const Graph& graph)
     for (auto &node : graph.nodes)
     {
         // only print nodes of the displayed shapes
-        if (find(Graph::displayed_shapes.begin(), Graph::displayed_shapes.end(), node.shape) != Graph::displayed_shapes.end())
+        if (find(Graph::displayed_shapes.begin(), Graph::displayed_shapes.end(), node->shape) != Graph::displayed_shapes.end())
         {
             os << node;
         }

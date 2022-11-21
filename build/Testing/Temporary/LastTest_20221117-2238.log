@@ -1,0 +1,139 @@
+Start testing: Nov 17 16:41 CST
+----------------------------------------------------------
+2/4 Testing: GraphTest
+2/4 Test: GraphTest
+Command: "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/GraphTest"
+Directory: /Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build
+"GraphTest" start time: Nov 17 16:41 CST
+Output:
+----------------------------------------------------------
+Error: node not a node not found
+Error: node not a node not found
+Error: self-loop a -> a detected
+Error: edge a -> e already exists
+Error: cycle g -> e -> a -> g detected
+a has 0 requestors, with a max priority of 10 from a
+b has 0 requestors, with a max priority of 20 from b
+c has 0 requestors, with a max priority of 30 from c
+d has 0 requestors, with a max priority of 40 from d
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"GraphTest" end time: Nov 17 16:41 CST
+"GraphTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+1/4 Testing: NodeTest
+1/4 Test: NodeTest
+Command: "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/NodeTest"
+Directory: /Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build
+"NodeTest" start time: Nov 17 16:41 CST
+Output:
+----------------------------------------------------------
+a has 0 requestors, with a max priority of 10 from a
+b has 0 requestors, with a max priority of 20 from b
+c has 0 requestors, with a max priority of 30 from c
+d has 0 requestors, with a max priority of 40 from d
+e has 2 requestors, with a max priority of 20 from b
+f has 2 requestors, with a max priority of 40 from d
+g has 4 requestors, with a max priority of 40 from d
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest" end time: Nov 17 16:41 CST
+"NodeTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: ParseDiamondGraph
+4/4 Test: ParseDiamondGraph
+Command: "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/DAGParser" "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/TestFiles/diamond-graph.dot" "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/TestFiles/diamond-task-system.camkes"
+Directory: /Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build
+"ParseDiamondGraph" start time: Nov 17 16:41 CST
+Output:
+----------------------------------------------------------
+Added box node: timer
+Added box node: t1
+Added box node: t2
+Added box node: t3
+Added box node: pip
+Added box node: propagation
+Added box node: ipcp
+Added circle node: conn_pip
+Added edge: t1 -> conn_pip
+Added edge: t2 -> conn_pip
+Added edge: conn_pip -> pip
+Added circle node: conn_propagation
+Added edge: t2 -> conn_propagation
+Added edge: t3 -> conn_propagation
+Added edge: conn_propagation -> propagation
+Added circle node: conn_ipcp
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Failed.
+"ParseDiamondGraph" end time: Nov 17 16:41 CST
+"ParseDiamondGraph" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: ParseGraph
+3/4 Test: ParseGraph
+Command: "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build/DAGParser" "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/TestFiles/graph.dot" "/Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/TestFiles/task-system.camkes"
+Directory: /Users/jor/Documents/School/WashU/FL2022/Student/M&G Research/M Assist/build
+"ParseGraph" start time: Nov 17 16:41 CST
+Output:
+----------------------------------------------------------
+Added box node: timer
+Added box node: t1
+Added box node: t2
+Added box node: t3
+Added box node: t4
+Added box node: pip
+Added box node: propagation
+Added box node: ipcp
+Added circle node: conn_pip
+Added edge: t1 -> conn_pip
+Added edge: t2 -> conn_pip
+Added edge: conn_pip -> pip
+Added circle node: conn_propagation
+Added edge: t3 -> conn_propagation
+Added edge: t4 -> conn_propagation
+Added edge: conn_propagation -> propagation
+Added circle node: conn_ipcp
+Added edge: pip -> conn_ipcp
+Added edge: propagation -> conn_ipcp
+Added edge: conn_ipcp -> ipcp
+Added circle node: periodic
+Added edge: t1 -> periodic
+Added edge: t2 -> periodic
+Added edge: t3 -> periodic
+Added edge: t4 -> periodic
+Added edge: periodic -> timer
+Ignored diamond node: timer.epit2_conn.timer.gpt_conn
+Ignored edge: timer -> timer.epit2_conn.timer.gpt_conn
+Ignored edge: timer.epit2_conn.timer.gpt_conn -> timer
+Ignored edge: timer.epit2_conn.timer.gpt_conn -> timer
+Found priority: t1 = 10
+Found priority: t2 = 30
+Found priority: t3 = 20
+Found priority: t4 = 40
+Graph:
+timer has 4 requestors, with a max priority of 40 from t4
+t1 has 0 requestors, with a max priority of 10 from t1
+t2 has 0 requestors, with a max priority of 30 from t2
+t3 has 0 requestors, with a max priority of 20 from t3
+t4 has 0 requestors, with a max priority of 40 from t4
+pip has 2 requestors, with a max priority of 30 from t2
+propagation has 2 requestors, with a max priority of 40 from t4
+ipcp has 4 requestors, with a max priority of 40 from t4
+
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"ParseGraph" end time: Nov 17 16:41 CST
+"ParseGraph" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 17 16:41 CST

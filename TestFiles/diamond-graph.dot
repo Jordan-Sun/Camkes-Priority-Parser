@@ -1,0 +1,83 @@
+
+
+digraph {
+
+    "timer" [label="timer::TimeServer", shape=box,style=rounded];
+
+    "t1" [label="t1::Task", shape=box,style=rounded];
+
+    "t2" [label="t2::Task", shape=box,style=rounded];
+
+    "t3" [label="t3::Task", shape=box,style=rounded];
+
+    "pip" [label="pip::ServiceForwarder", shape=box,style=rounded];
+
+    "propagation" [label="propagation::ServiceForwarder", shape=box,style=rounded];
+
+    "ipcp" [label="ipcp::ServiceTerminator", shape=box,style=rounded];
+
+
+
+    
+        "conn_pip" [shape=circle];
+        
+            "t1" -> "conn_pip";
+        
+            "t2" -> "conn_pip";
+        
+        
+            "conn_pip" -> "pip";
+        
+    
+
+    
+        "conn_propagation" [shape=circle];
+        
+            "t2" -> "conn_propagation";
+        
+            "t3" -> "conn_propagation";
+        
+        
+            "conn_propagation" -> "propagation";
+        
+    
+
+    
+        "conn_ipcp" [shape=circle];
+        
+            "pip" -> "conn_ipcp";
+        
+            "propagation" -> "conn_ipcp";
+        
+        
+            "conn_ipcp" -> "ipcp";
+        
+    
+
+    
+        "periodic" [shape=circle];
+        
+            "t1" -> "periodic";
+        
+            "t2" -> "periodic";
+        
+            "t3" -> "periodic";
+        
+        
+            "periodic" -> "timer";
+        
+    
+
+    
+        "timer.epit2_conn.timer.gpt_conn" [shape=diamond];
+        
+            "timer" -> "timer.epit2_conn.timer.gpt_conn";
+        
+        
+            "timer.epit2_conn.timer.gpt_conn" -> "timer";
+        
+            "timer.epit2_conn.timer.gpt_conn" -> "timer";
+        
+    
+
+}
