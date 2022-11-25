@@ -29,3 +29,6 @@ Ignored edge: timer.epit2_conn.timer.gpt_conn -> timer
 Found priority: t1 = 10
 Found priority: t2 = 20
 Found priority: t3 = 30
+Found protocol: pip = inherited
+Found protocol: propagation = propagated
+Found protocol: ipcp = fixed

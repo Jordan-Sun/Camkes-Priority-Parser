@@ -2,8 +2,7 @@ Added box node: timer
 Added box node: t1
 Added box node: t2
 Added box node: t3
-Added box node: t4
-AAdded box node: proAdded boxAdded box node: ipcAdAdded circle node: Added circle node: conn_pip
+Added box node: pipAAdded box node: proAdded boxAdded box node: ipcAdAdded circle node: Added circle node: conn_pip
 Added edge: t1 -> conn_pip
 Added edge: t2 -> conn_pip
 Added edge: conn_pip -> pip

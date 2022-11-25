@@ -11,21 +11,35 @@
 
 #define NONE -1
 
-class Node : public std::enable_shared_from_this<Node> {
+enum class Protocol
+{
+    UNSET,
+    PIP,
+    PROP,
+    IPCP,
+};
+
+Protocol get_protocol(const std::string protocol);
+
+class Node : public std::enable_shared_from_this<Node>
+{
 private:
     // returns the requestors of the node
     std::set<std::shared_ptr<const Node>> get_requestors() const;
+    // returns the task requestors of the node
+    std::set<std::shared_ptr<const Node>> get_tasks() const;
 
 public:
     const std::string name;
     const std::string shape;
     // only a true requestor if the priority is not NONE
     int priority;
+    Protocol protocol;
     std::set<std::shared_ptr<Node>> immed_requestors;
     // temp variable used in the graph class
     std::shared_ptr<Node> last;
 
-    Node(std::string name, std::string shape, int priority = NONE);
+    Node(std::string name, std::string shape, int priority = NONE, Protocol protocol = Protocol::UNSET);
     ~Node() = default;
 
     // add a requestor to the node, return true if successful

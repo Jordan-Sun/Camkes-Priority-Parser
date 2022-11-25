@@ -11,9 +11,6 @@
 
 using namespace std;
 
-// static vector of displayed shapes
-vector<string> Graph::displayed_shapes = {"box"};
-
 // returns the size of the graph
 size_t Graph::size() const
 {
@@ -131,7 +128,7 @@ ostream& operator<<(ostream& os, const Graph& graph)
     for (auto &node : graph.nodes)
     {
         // only print nodes of the displayed shapes
-        if (find(Graph::displayed_shapes.begin(), Graph::displayed_shapes.end(), node->shape) != Graph::displayed_shapes.end())
+        if (node->protocol != Protocol::UNSET)
         {
             os << *node;
         }

@@ -21,6 +21,7 @@ int main(int argc, char* argv[])
     regex edge_regex("\".*\" -> \".*\"");
     regex node_shape_regex("shape=[a-z]+");
     regex priority_regex(".*\\._priority = [0-9]+");
+    regex protocol_regex(".*\\.r_priority_protocol = \".*\"");
 
     // helper variables
     string line;
@@ -139,6 +140,22 @@ int main(int argc, char* argv[])
             // set the node priority
             log_file << "Found priority: " << node_name << " = " << priority_value << endl;
             graph.get_node(node_name)->priority = stoi(priority_value);
+        }
+
+        // check for protocol
+        if (regex_search(line, match, protocol_regex))
+        {
+            // find the node name and protocol
+            string protocol = match.str();
+            replace(protocol.begin(), protocol.end(), '.', ' ');
+            istringstream iss(protocol);
+            string node_name, discard, equals, protocol_value;
+            iss >> node_name >> discard >> equals >> protocol_value;
+            // erase quotes from the matched protocol
+            protocol_value.erase(std::remove(protocol_value.begin(), protocol_value.end(), '\"'), protocol_value.end());
+            // set the node protocol
+            log_file << "Found protocol: " << node_name << " = " << protocol_value << endl;
+            graph.get_node(node_name)->protocol = get_protocol(protocol_value);
         }
     }
 
