@@ -14,6 +14,7 @@ add_test(NAME NodeTest COMMAND NodeTest)
 add_test(NAME GraphTest COMMAND GraphTest)
 add_test(NAME ParseGraph COMMAND DAGParser -g ${CMAKE_CURRENT_SOURCE_DIR}/TestFiles/graph.dot -c ${CMAKE_CURRENT_SOURCE_DIR}/TestFiles/task-system.camkes)
 add_test(NAME ParseDiamondGraph COMMAND DAGParser -g ${CMAKE_CURRENT_SOURCE_DIR}/TestFiles/diamond-graph.dot -c ${CMAKE_CURRENT_SOURCE_DIR}/TestFiles/diamond-task-system.camkes --extra)
+add_test(NAME ParseIPCPGraph COMMAND DAGParser --graph ${CMAKE_CURRENT_SOURCE_DIR}/TestFiles/ipcp-graph.dot --config ${CMAKE_CURRENT_SOURCE_DIR}/TestFiles/ipcp-task-system.camkes)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
