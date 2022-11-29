@@ -45,8 +45,8 @@ int main(int argc, char* argv[])
 
     regex priority_regex(".*\\._priority = [0-9]+");
     regex protocol_regex(".*\\.r_priority_protocol = \".*\"");
-    regex r_priority_regex("([a-zA-Z]+)\\.r_priority = (.*)");
-    regex r_num_threads_regex("([a-zA-Z]+)\\.r_num_threads = (.*)");
+    regex r_priority_regex("([a-zA-Z]+)\\.([a-zA-Z]+)_priority = (.*)");
+    regex r_num_threads_regex("([a-zA-Z]+)\\.([a-zA-Z]+)_num_threads = (.*)");
 
     // helper variables
     string line;
@@ -251,8 +251,8 @@ int main(int argc, char* argv[])
                 auto node = graph.get_node(node_name);
                 if (node)
                 {
-                    line = regex_replace(line, r_priority_regex, "$1.r_priority = " + to_string(node->get_max_priority().second));
-                    log_file << "Found r_priority node: " << node_name << endl;
+                    line = regex_replace(line, r_priority_regex, "$1.$2_priority = " + to_string(node->get_max_priority().second));
+                    log_file << "Found priority node: " << node_name << endl;
                 }
                 else
                 {
@@ -265,8 +265,8 @@ int main(int argc, char* argv[])
                 auto node = graph.get_node(node_name);
                 if (node)
                 {
-                    line = regex_replace(line, r_num_threads_regex, "$1.r_num_threads = " + to_string(node->get_num_requestors()));
-                    log_file << "Found r_num_threads node: " << node_name << endl;
+                    line = regex_replace(line, r_num_threads_regex, "$1.$2_num_threads = " + to_string(node->get_num_requestors()));
+                    log_file << "Found num_threads node: " << node_name << endl;
                 }
                 else
                 {
