@@ -103,26 +103,28 @@ assembly {
 		//Necessary for timer
         timer.timers_per_client = 1;
 
+		//Set priority protocols
+		pip.r_priority_protocol = "inherited";
+		propagation.r_priority_protocol = "propagated";
+		ipcp.r_priority_protocol = "fixed";
+
 		//Set priorities
 		t1._priority = 10;
 		t1.period_ms = 1000;
 		t2._priority = 20;
 		t2.period_ms = 200;
-		pip.r_priority = 31; //Priority laddering
 		t3._priority = 30;
 		t3.period_ms = 500;
-		propagation.r_priority = 2o; //Priority laddering
+		
+		// Expected outputs
+		
+		pip.r_priority = 30; //Priority laddering
+		propagation.r_priority = 20; //Priority laddering
 		ipcp.r_priority = 30; //Priority laddering
 
 		//Set threadpool sizes
 		pip.r_num_threads = forwarder_num_threads;
 		propagation.r_num_threads = forwarder_num_threads;
 		ipcp.r_num_threads = terminator_num_threads;
-
-		//Set priority protocols
-		pip.r_priority_protocol = "inherited";
-		propagation.r_priority_protocol = "propagated";
-		ipcp.r_priority_protocol = "fixed";
-
 	}
 }
