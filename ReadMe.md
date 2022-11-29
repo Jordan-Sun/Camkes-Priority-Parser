@@ -1,5 +1,7 @@
 # Camkes Priority Parser
 
+![Build Badge](https://img.shields.io/github/workflow/status/Jordan-Sun/Camkes-Priority-Parser/CMake/master)
+
 Parse the dag tree from a .dot format file.  
 Parse the `_priority` of the tasks and the `r_priority_protocol` from a configuration file or a camkes configuration file.  
 Prints the computed `r_priority` and `r_num_threads`.  
