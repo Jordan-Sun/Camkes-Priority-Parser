@@ -22,8 +22,8 @@ static struct option long_options[] =
         {"graph", required_argument, 0, 'g'},
         {"config", required_argument, 0, 'c'},
         {"log", required_argument, 0, 'l'},
-        {0, 0, 0, 0}
-    };
+        {"replace", required_argument, 0, 'r'},
+        {0, 0, 0, 0}};
 
 int main(int argc, char* argv[])
 {
@@ -31,17 +31,22 @@ int main(int argc, char* argv[])
     string dag_file_name = "";
     string priority_file_name = "";
     string log_file_name = "default.log";
+    string replace_file_name = "";
 
     // boolean flags
     bool graph_flag = false;
     bool config_flag = false;
+    bool replacement_flag = false;
 
     // regex for parsing the input file
     regex node_regex("\".*\" \\[.*\\]");
     regex edge_regex("\".*\" -> \".*\"");
     regex node_shape_regex("shape=[a-z]+");
+
     regex priority_regex(".*\\._priority = [0-9]+");
     regex protocol_regex(".*\\.r_priority_protocol = \".*\"");
+    regex r_priority_regex("([a-zA-Z]+)\\.r_priority = (.*)");
+    regex r_num_threads_regex("([a-zA-Z]+)\\.r_num_threads = (.*)");
 
     // helper variables
     string line;
@@ -54,7 +59,7 @@ int main(int argc, char* argv[])
     while (true)
     {
         int option_index = 0;
-        int c = getopt_long(argc, argv, "g:c:l:", long_options, &option_index);
+        int c = getopt_long(argc, argv, "g:c:l:r:", long_options, &option_index);
         
         if (c == -1)
             break;
@@ -73,6 +78,11 @@ int main(int argc, char* argv[])
 
         case 'l':
             log_file_name = optarg;
+            break;
+        
+        case 'r':
+            replace_file_name = optarg;
+            replacement_flag = true;
             break;
 
         default:
@@ -218,11 +228,58 @@ int main(int argc, char* argv[])
         }
     }
 
+    // print the graph
+    cout << graph << endl;
+
+    if (replacement_flag)
+    {
+        // copy the config file to the tmp file but replace the r_priority and r_num_threads fields
+        priority_file.clear();
+        priority_file.seekg(0, ios::beg);
+        ofstream replace_file(replace_file_name);
+        if (!replace_file.is_open())
+        {
+            cerr << "Error: could not open replace file " << replace_file_name << endl;
+            return FAILED_TO_OPEN_FILE;
+        }
+
+        while(getline(priority_file, line))
+        {
+            if (regex_search(line, match, r_priority_regex))
+            {
+                string node_name = match.str(1);
+                auto node = graph.get_node(node_name);
+                if (node)
+                {
+                    line = regex_replace(line, r_priority_regex, "$1.r_priority = " + to_string(node->get_max_priority().second));
+                    log_file << "Found r_priority node: " << node_name << endl;
+                }
+                else
+                {
+                    cerr << "Could not find node: " << node_name << endl;
+                }
+            }
+            else if (regex_search(line, match, r_num_threads_regex))
+            {
+                string node_name = match.str(1);
+                auto node = graph.get_node(node_name);
+                if (node)
+                {
+                    line = regex_replace(line, r_num_threads_regex, "$1.r_num_threads = " + to_string(node->get_num_requestors()));
+                    log_file << "Found r_num_threads node: " << node_name << endl;
+                }
+                else
+                {
+                    cerr << "Could not find node: " << node_name << endl;
+                }
+            }
+            replace_file << line << endl;
+        }
+    }
+
     // close priority file
     priority_file.close();
 
-    // print the graph
-    cout << graph << endl;
 
     return SUCCESS;
 }

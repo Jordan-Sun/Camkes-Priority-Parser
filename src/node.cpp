@@ -77,7 +77,7 @@ set<shared_ptr<const Node>> Node::get_requestors() const
 // returns the number of requestors of the node
 int Node::get_num_requestors() const
 {
-    return get_requestors().size();
+    return get_requestors().size() + (extra_thread ? 1 : 0);
 }
 
 // returns the task requestors of the node
@@ -128,6 +128,6 @@ ostream& operator<<(ostream& os, const Node& node)
 {
     auto max_priority = node.get_max_priority();
     os << node.name << ".r_priority = " << max_priority.second << ";\n"
-    << node.name << ".r_num_threads = " << node.get_num_requestors() + (node.extra_thread ? 1 : 0) << ";" << endl;
+    << node.name << ".r_num_threads = " << node.get_num_requestors() << ";" << endl;
     return os;
 }
