@@ -32,6 +32,10 @@ int main(int argc, char* argv[])
     string priority_file_name = "";
     string log_file_name = "default.log";
 
+    // boolean flags
+    bool graph_flag = false;
+    bool config_flag = false;
+
     // regex for parsing the input file
     regex node_regex("\".*\" \\[.*\\]");
     regex edge_regex("\".*\" -> \".*\"");
@@ -59,10 +63,12 @@ int main(int argc, char* argv[])
         {
         case 'g':
             dag_file_name = optarg;
+            graph_flag = true;
             break;
         
         case 'c':
             priority_file_name = optarg;
+            config_flag = true;
             break;
 
         case 'l':
@@ -72,6 +78,17 @@ int main(int argc, char* argv[])
         default:
             break;
         }
+    }
+
+    // check if the required arguments are present
+    if (!graph_flag || !config_flag)
+    {
+        if (!graph_flag)
+            cout << "Error: graph file not specified" << endl;
+        if (!config_flag)
+            cout << "Error: config file not specified" << endl;
+        cout << "Usage: " << argv[0] << " -g|--graph <dag_file> -c|--config <priority_file> [-l|--log <log_file>] [--extra]" << endl;
+        return INVALID_ARGS;
     }
 
     // open dag file

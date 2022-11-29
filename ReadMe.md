@@ -2,12 +2,12 @@
 
 ![Build Badge](https://img.shields.io/github/workflow/status/Jordan-Sun/Camkes-Priority-Parser/CMake/master)
 
-Usage: `DAGParser -g dag_file -c priority_file [-l log_file | --extra]`
+Usage: `DAGParser -g|--graph <dag_file> -c|--config <priority_file> [-l|--log <log_file>] [--extra]`
 
-- Parse the dag tree from the .dot format file `dag_file`.  
-- Parse the `_priority` of the tasks and the `r_priority_protocol` from either a setup file or a camkes configuration file `priority_file`.  
+- Parse the dag tree from the .dot format file `<dag_file>`.  
+- Parse the `_priority` of the tasks and the `r_priority_protocol` from either a setup file or a camkes configuration file `<priority_file>`.  
 - Prints the computed `r_priority` and `r_num_threads` to `stdout`.  
-- Prints the log to `log_file` or `default.log` by default.
+- Prints the log to `<log_file>` or `default.log` by default.
 
 ## Examples
 1. Open shell at the current folder.
