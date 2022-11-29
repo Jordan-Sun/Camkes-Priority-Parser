@@ -14,4 +14,22 @@ Usage: `./DAGParser <dag_file> <priority_file>`
 2. Run `cmake CMakeList.txt` to setup cmake.
 3. Run `make` to build the `DAGParser` program.
 4. Run `./DAGParser TestFiles/graph.dot TestFiles/task-system.camkes`.  
-Alternatively, run `./DAGParser TestFiles/diamond-graph.dot TestFiles/diamond-task-system.camkes` for a different set of files.
+5. The output should be
+```
+pip.r_priority = 30;
+pip.r_num_threads = 2;
+propagation.r_priority = 40;
+propagation.r_num_threads = 2;
+ipcp.r_priority = 40;
+ipcp.r_num_threads = 1;
+```
+6. Run `./DAGParser TestFiles/diamond-graph.dot TestFiles/diamond-task-system.camkes` for a different set of test files.  
+7. The output should be
+```
+pip.r_priority = 20;
+pip.r_num_threads = 2;
+propagation.r_priority = 30;
+propagation.r_num_threads = 2;
+ipcp.r_priority = 30;
+ipcp.r_num_threads = 1;
+```
