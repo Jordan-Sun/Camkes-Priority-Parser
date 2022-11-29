@@ -13,4 +13,4 @@ Makefile
 DAGParser
 GraphTest
 NodeTest
-log.txt
+*.log

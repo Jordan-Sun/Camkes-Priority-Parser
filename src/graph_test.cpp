@@ -7,14 +7,14 @@ using namespace std;
 int main()
 {
     Graph p;
-    
-    auto a = make_shared<Node>("a", "box", 10);
-    auto b = make_shared<Node>("b", "box", 20);
-    auto c = make_shared<Node>("c", "box", 30);
-    auto d = make_shared<Node>("d", "box", 40);
-    auto e = make_shared<Node>("e", "circle");
-    auto f = make_shared<Node>("f", "circle");
-    auto g = make_shared<Node>("g", "circle");
+
+    auto a = make_shared<Node>("a", "box", false, 10);
+    auto b = make_shared<Node>("b", "box", false, 20);
+    auto c = make_shared<Node>("c", "box", false, 30);
+    auto d = make_shared<Node>("d", "box", false, 40);
+    auto e = make_shared<Node>("e", "circle", false);
+    auto f = make_shared<Node>("f", "circle", false);
+    auto g = make_shared<Node>("g", "circle", false);
 
     assert(p.add_node(a));
     assert(p.add_node(b));
