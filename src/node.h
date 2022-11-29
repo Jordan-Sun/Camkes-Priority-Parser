@@ -7,6 +7,7 @@
 
 #include <string>
 #include <set>
+#include <memory>
 #include <ostream>
 
 #define NONE -1
