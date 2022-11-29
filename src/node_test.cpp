@@ -6,13 +6,13 @@ using namespace std;
 
 int main()
 {
-    auto a = make_shared<Node>("a", "box", 10, Protocol::UNSET);
-    auto b = make_shared<Node>("b", "box", 20, Protocol::UNSET);
-    auto c = make_shared<Node>("c", "box", 30, Protocol::UNSET);
-    auto d = make_shared<Node>("d", "box", 40, Protocol::UNSET);
-    auto e = make_shared<Node>("e", "circle", NONE, Protocol::PIP);
-    auto f = make_shared<Node>("f", "circle", NONE, Protocol::PROP);
-    auto g = make_shared<Node>("g", "circle", NONE, Protocol::IPCP);
+    auto a = make_shared<Node>("a", "box", false, 10, Protocol::UNSET);
+    auto b = make_shared<Node>("b", "box", false, 20, Protocol::UNSET);
+    auto c = make_shared<Node>("c", "box", false, 30, Protocol::UNSET);
+    auto d = make_shared<Node>("d", "box", false, 40, Protocol::UNSET);
+    auto e = make_shared<Node>("e", "circle", false, NONE, Protocol::PIP);
+    auto f = make_shared<Node>("f", "circle", false, NONE, Protocol::PROP);
+    auto g = make_shared<Node>("g", "circle", false, NONE, Protocol::IPCP);
 
     assert(e->add_requestor(a));
     assert(!e->add_requestor(a));

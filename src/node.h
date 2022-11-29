@@ -29,6 +29,8 @@ private:
     std::set<std::shared_ptr<const Node>> get_requestors() const;
     // returns the task requestors of the node
     std::set<std::shared_ptr<const Node>> get_tasks() const;
+    // require an extra thread if true
+    const bool extra_thread;
 
 public:
     const std::string name;
@@ -40,7 +42,7 @@ public:
     // temp variable used in the graph class
     std::shared_ptr<Node> last;
 
-    Node(std::string name, std::string shape, int priority = NONE, Protocol protocol = Protocol::UNSET);
+    Node(std::string name, std::string shape, bool extra_thread = false, int priority = NONE, Protocol protocol = Protocol::UNSET);
     ~Node() = default;
 
     // add a requestor to the node, return true if successful

@@ -28,8 +28,8 @@ Protocol get_protocol(const std::string protocol)
     }
 }
 
-Node::Node(string name, string shape, int priority, Protocol protocol)
-    : name(name), shape(shape), priority(priority), protocol(protocol), last(nullptr)
+Node::Node(string name, string shape, bool extra_thread, int priority, Protocol protocol)
+    : name(name), shape(shape), extra_thread(extra_thread), priority(priority), protocol(protocol), last(nullptr)
 {
 }
 
@@ -128,6 +128,6 @@ ostream& operator<<(ostream& os, const Node& node)
 {
     auto max_priority = node.get_max_priority();
     os << node.name << ".r_priority = " << max_priority.second << ";\n"
-    << node.name << ".r_num_threads = " << node.get_num_requestors() << ";" << endl;
+    << node.name << ".r_num_threads = " << node.get_num_requestors() + (node.extra_thread ? 1 : 0) << ";" << endl;
     return os;
 }

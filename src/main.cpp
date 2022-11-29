@@ -7,6 +7,7 @@
 #include "main.h"
 #include "node.h"
 #include "graph.h"
+#include <getopt.h>
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -14,8 +15,23 @@
 
 using namespace std;
 
+static int extra_thread_flag = false;
+static struct option long_options[] =
+    {
+        {"extra", no_argument, &extra_thread_flag, true},
+        {"graph", required_argument, 0, 'g'},
+        {"config", required_argument, 0, 'c'},
+        {"log", required_argument, 0, 'l'},
+        {0, 0, 0, 0}
+    };
+
 int main(int argc, char* argv[])
 {
+    // options
+    string dag_file_name = "";
+    string priority_file_name = "";
+    string log_file_name = "default.log";
+
     // regex for parsing the input file
     regex node_regex("\".*\" \\[.*\\]");
     regex edge_regex("\".*\" -> \".*\"");
@@ -30,21 +46,55 @@ int main(int argc, char* argv[])
     vector<string> ignored_nodes;
     Graph graph;
 
-    // log file
-    ofstream log_file("log.txt");
-
-    // check for correct number of arguments
-    if (argc != NUM_ARGS)
+    // parse the command line arguments
+    while (true)
     {
-        cerr << "Usage: " << argv[PROGRAM_NAME] << " <dag file> <priority file>" << endl;
-        return INVALID_ARGS;
+        int option_index = 0;
+        int c = getopt_long(argc, argv, "g:c:l:", long_options, &option_index);
+        
+        if (c == -1)
+            break;
+
+        switch (c)
+        {
+        case 'g':
+            dag_file_name = optarg;
+            break;
+        
+        case 'c':
+            priority_file_name = optarg;
+            break;
+
+        case 'l':
+            log_file_name = optarg;
+            break;
+
+        default:
+            break;
+        }
     }
 
     // open dag file
-    ifstream dag_file(argv[DAG_FILE]);
+    ifstream dag_file(dag_file_name);
     if (!dag_file.is_open())
     {
-        cerr << "Error: could not open dag file " << argv[DAG_FILE] << endl;
+        cerr << "Error: could not open dag file " << dag_file_name << endl;
+        return FAILED_TO_OPEN_FILE;
+    }
+
+    // open priority file
+    ifstream priority_file(priority_file_name);
+    if (!priority_file.is_open())
+    {
+        cerr << "Error: could not open priority file " << priority_file_name << endl;
+        return FAILED_TO_OPEN_FILE;
+    }
+
+    // open log file
+    ofstream log_file(log_file_name);
+    if (!log_file.is_open())
+    {
+        cerr << "Error: could not open log file " << log_file_name << endl;
         return FAILED_TO_OPEN_FILE;
     }
 
@@ -72,7 +122,7 @@ int main(int argc, char* argv[])
                 // add the node to the graph if it is acceptable
                 if (find(acceptable_shapes.begin(), acceptable_shapes.end(), shape) != acceptable_shapes.end())
                 {
-                    auto n = make_shared<Node>(node_name, shape);
+                    auto n = make_shared<Node>(node_name, shape, extra_thread_flag);
                     if (graph.add_node(n))
                     {
                         log_file << "Added " << shape << " node: " << node_name << endl;
@@ -116,14 +166,6 @@ int main(int argc, char* argv[])
     }
     // close dag file
     dag_file.close();
-
-    // open priority file
-    ifstream priority_file(argv[PRIORITY_FILE]);
-    if (!priority_file.is_open())
-    {
-        cerr << "Error: could not open priority file " << argv[PRIORITY_FILE] << endl;
-        return FAILED_TO_OPEN_FILE;
-    }
 
     // parse priority file
     while(getline(priority_file, line))
