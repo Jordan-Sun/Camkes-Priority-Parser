@@ -39,7 +39,7 @@ ipcp.r_priority = 40;
 ipcp.r_num_threads = 1;
 ```
 
-### Non-diamond graph
+### Diamond graph
 Run `./DAGParser -g TestFiles/diamond-graph.dot -c TestFiles/diamond-task-system.camkes --extra` for a different set of test files with an extra `r_num_threads`.  
 The output should be
 ```
