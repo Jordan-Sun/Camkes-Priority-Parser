@@ -12,11 +12,11 @@ digraph {
 
     "t4" [label="t4::Task", shape=box,style=rounded];
 
-    "ipcp" [label="pip::ServiceForwarder", shape=box,style=rounded];
+    "ipcp" [label="ipcp::ServiceForwarder", shape=box,style=rounded];
 
     "propagation" [label="propagation::ServiceForwarder", shape=box,style=rounded];
 
-    "pip" [label="ipcp::ServiceTerminator", shape=box,style=rounded];
+    "pip" [label="pip::ServiceTerminator", shape=box,style=rounded];
 
 
 
