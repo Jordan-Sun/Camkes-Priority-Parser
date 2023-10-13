@@ -2,10 +2,11 @@
 
 ## Introduction
 
-Camkes priority parser provides a parser that parse a .dot formatted dag tree and a setup file or a camkes configuration file. The parser will then print the computed `r_priority` and `r_num_threads` to `stdout`.
+Camkes priority parser provides a parser that parse a .dot formatted dag tree and a setup file or a camkes configuration file. The parser will then print the computed `priority` and `num_threads` to `stdout`. It additionally warns the user if there are potential overcounting or other issues.
 
 ## Insallation 
 
+The parser can be build from source rather quickly through running cmake:
 ```
 git clone https://github.com/Jordan-Sun/Camkes-Priority-Parser.git
 cmake CMakeList.txt
